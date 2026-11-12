@@ -1,0 +1,2943 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover" />
+<meta name="theme-color" content="#16091a" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<title>MOMIN MATH AI PRO — Ultimate · Sumaiya Special</title>
+<style>
+/* ============================================================
+   MOMIN MATH AI PRO — ULTIMATE · SUMAIYA SPECIAL ENHANCED
+   ============================================================ */
+:root{
+  --r:18px; --r2:13px; --r3:10px;
+  --font:'Segoe UI',system-ui,-apple-system,'Noto Sans Bengali','Hind Siliguri',Roboto,Arial,sans-serif;
+  --font-math:'Cambria Math','Latin Modern Math','Segoe UI',serif;
+  --font-love:Georgia,'Playfair Display','Times New Roman',serif;
+  --nav-h:calc(64px + env(safe-area-inset-bottom));
+}
+*,*::before,*::after{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;padding:0;min-height:100%}
+body{
+  font-family:var(--font); background:var(--bg0); color:var(--txt);
+  transition:background .45s ease, color .3s ease;
+  padding-bottom:calc(var(--nav-h) + 10px);
+  overflow-x:hidden; -webkit-font-smoothing:antialiased;
+}
+button,input,textarea,select{font-family:inherit;font-size:inherit;color:inherit}
+button{cursor:pointer;border:none;background:none}
+::-webkit-scrollbar{width:6px;height:6px}
+::-webkit-scrollbar-thumb{background:rgba(140,160,255,.3);border-radius:8px}
+::-webkit-scrollbar-track{background:transparent}
+
+/* ============================================================
+   THEME VARIABLES
+   ============================================================ */
+body.theme-dark{
+  --surface:rgba(255,255,255,.055); --surface2:rgba(255,255,255,.09); --surface3:rgba(255,255,255,.14);
+  --border:rgba(140,160,255,.16); --border2:rgba(140,160,255,.30);
+  --txt:#e9edff; --txt-dim:#98a3cc; --txt-mute:#6b76a3;
+  --input-bg:rgba(0,0,0,.24);
+  --ok:#34d399; --err:#fb7185; --warn:#fbbf24;
+}
+body.theme-light{
+  --surface:rgba(255,255,255,.75); --surface2:rgba(255,255,255,.92); --surface3:#ffffff;
+  --border:rgba(60,80,170,.16); --border2:rgba(60,80,170,.30);
+  --txt:#101733; --txt-dim:#4a5480; --txt-mute:#78819f;
+  --input-bg:rgba(240,244,255,.9);
+  --ok:#059669; --err:#dc2626; --warn:#d97706;
+}
+
+/* ============================================================
+   V1 CLASSIC
+   ============================================================ */
+body.v-classic.theme-dark{
+  --bg0:#060b1c; --bg1:#0a1128; --bg2:#0f1a3a;
+  --accent:#7c5cff; --accent2:#5b7dff; --accent3:#22d3ee; --accent-txt:#fff;
+  --card-bg:linear-gradient(155deg,var(--surface2),var(--surface));
+  --card-shadow:0 8px 24px rgba(0,0,0,.38);
+  --card-border:1px solid var(--border);
+  --btn-bg:linear-gradient(135deg,#6d4aff,#4a6eff);
+  --btn-shadow:0 6px 18px rgba(109,74,255,.36);
+  --logo-grad:linear-gradient(135deg,#7c5cff,#4a6eff 60%,#22d3ee);
+  --badge-grad:linear-gradient(135deg,rgba(124,92,255,.3),rgba(34,211,238,.18));
+}
+body.v-classic.theme-light{
+  --bg0:#f6f8ff; --bg1:#eef2ff; --bg2:#ffffff;
+  --accent:#6d4aff; --accent2:#4a6eff; --accent3:#0ea5e9; --accent-txt:#fff;
+  --card-bg:linear-gradient(155deg,#ffffff,#f8faff);
+  --card-shadow:0 8px 22px rgba(60,80,160,.12);
+  --card-border:1px solid var(--border);
+  --btn-bg:linear-gradient(135deg,#6d4aff,#4a6eff);
+  --btn-shadow:0 6px 18px rgba(109,74,255,.28);
+  --logo-grad:linear-gradient(135deg,#6d4aff,#4a6eff 60%,#0ea5e9);
+  --badge-grad:linear-gradient(135deg,rgba(109,74,255,.16),rgba(14,165,233,.12));
+}
+
+/* ============================================================
+   V2 PREMIUM
+   ============================================================ */
+body.v-premium.theme-dark{
+  --bg0:#0a0618; --bg1:#160c34; --bg2:#1f124a;
+  --accent:#a855f7; --accent2:#d4af37; --accent3:#e9d5ff; --accent-txt:#fff;
+  --card-bg:linear-gradient(155deg,rgba(90,45,160,.55),rgba(40,20,90,.78));
+  --card-shadow:0 14px 38px rgba(120,40,220,.34), inset 0 0 0 1.2px rgba(212,175,55,.34);
+  --card-border:1.5px solid transparent;
+  --btn-bg:linear-gradient(135deg,#a855f7,#d4af37);
+  --btn-shadow:0 8px 24px rgba(168,85,247,.42);
+  --logo-grad:linear-gradient(135deg,#a855f7,#d4af37 60%,#e9d5ff);
+  --badge-grad:linear-gradient(135deg,rgba(168,85,247,.28),rgba(212,175,55,.2));
+}
+body.v-premium.theme-light{
+  --bg0:#fbf7ff; --bg1:#f5ebff; --bg2:#ffffff;
+  --accent:#9333ea; --accent2:#b8860b; --accent3:#c084fc; --accent-txt:#fff;
+  --card-bg:linear-gradient(155deg,#ffffff,#faf3ff);
+  --card-shadow:0 12px 30px rgba(147,51,234,.14), inset 0 0 0 1.2px rgba(184,134,11,.32);
+  --card-border:1.5px solid transparent;
+  --btn-bg:linear-gradient(135deg,#9333ea,#b8860b);
+  --btn-shadow:0 8px 22px rgba(147,51,234,.28);
+  --logo-grad:linear-gradient(135deg,#9333ea,#b8860b 60%,#c084fc);
+  --badge-grad:linear-gradient(135deg,rgba(147,51,234,.14),rgba(184,134,11,.14));
+}
+
+/* ============================================================
+   V3 CYBER PRO
+   ============================================================ */
+body.v-cyber.theme-dark{
+  --bg0:#010203; --bg1:#050a12; --bg2:#0a1628;
+  --accent:#00e5ff; --accent2:#bf00ff; --accent3:#00ff9d; --accent-txt:#001018;
+  --card-bg:linear-gradient(155deg,rgba(0,60,90,.42),rgba(0,15,30,.75));
+  --card-shadow:0 0 24px rgba(0,229,255,.16), inset 0 0 0 1px rgba(0,229,255,.24);
+  --card-border:1px solid rgba(0,229,255,.32);
+  --btn-bg:linear-gradient(135deg,#00e5ff,#00ff9d);
+  --btn-shadow:0 0 24px rgba(0,229,255,.5);
+  --logo-grad:linear-gradient(135deg,#00e5ff,#bf00ff 60%,#00ff9d);
+  --badge-grad:linear-gradient(135deg,rgba(0,229,255,.28),rgba(191,0,255,.18));
+}
+body.v-cyber.theme-light{
+  --bg0:#eaf5fb; --bg1:#d4ebf5; --bg2:#ffffff;
+  --accent:#0284c7; --accent2:#7c3aed; --accent3:#059669; --accent-txt:#fff;
+  --card-bg:linear-gradient(155deg,#ffffff,#e6f5ff);
+  --card-shadow:0 8px 24px rgba(2,132,199,.15), inset 0 0 0 1px rgba(2,132,199,.24);
+  --card-border:1px solid rgba(2,132,199,.32);
+  --btn-bg:linear-gradient(135deg,#0284c7,#7c3aed);
+  --btn-shadow:0 6px 20px rgba(2,132,199,.32);
+  --logo-grad:linear-gradient(135deg,#0284c7,#7c3aed 60%,#059669);
+  --badge-grad:linear-gradient(135deg,rgba(2,132,199,.16),rgba(124,58,237,.12));
+}
+
+/* ============================================================
+   V4 SUMAIYA SPECIAL — ENHANCED FEMININE EDITION
+   ============================================================ */
+body.v-sumaiya.theme-dark{
+  --bg0:#1a0d22; --bg1:#2e1738; --bg2:#3d2249;
+  --accent:#f9a8d4; --accent2:#e8b4b8; --accent3:#e9d5ff; --accent-txt:#5a1e3a;
+  --card-bg:linear-gradient(155deg,rgba(249,168,212,.14),rgba(233,213,255,.08));
+  --card-shadow:0 14px 34px rgba(200,100,150,.32), inset 0 0 0 1.5px rgba(249,168,212,.42);
+  --card-border:1.5px solid transparent;
+  --btn-bg:linear-gradient(135deg,#f9a8d4,#e8b4b8);
+  --btn-shadow:0 8px 22px rgba(249,168,212,.45);
+  --logo-grad:linear-gradient(135deg,#f9a8d4,#e8b4b8 55%,#e9d5ff);
+  --badge-grad:linear-gradient(135deg,rgba(249,168,212,.32),rgba(233,213,255,.22));
+}
+body.v-sumaiya.theme-light{
+  --bg0:#fef7fb; --bg1:#fdeef6; --bg2:#ffffff;
+  --accent:#ec4899; --accent2:#d4a5b8; --accent3:#c084fc; --accent-txt:#fff;
+  --card-bg:linear-gradient(155deg,#ffffff,#fef6fb);
+  --card-shadow:0 12px 30px rgba(236,72,153,.16), inset 0 0 0 1.5px rgba(236,72,153,.24);
+  --card-border:1.5px solid transparent;
+  --btn-bg:linear-gradient(135deg,#f9a8d4,#ec4899);
+  --btn-shadow:0 8px 22px rgba(236,72,153,.32);
+  --logo-grad:linear-gradient(135deg,#f9a8d4,#ec4899 55%,#c084fc);
+  --badge-grad:linear-gradient(135deg,rgba(236,72,153,.18),rgba(192,132,252,.14));
+}
+
+/* ============================================================
+   BACKGROUNDS PER VERSION
+   ============================================================ */
+#bgfx{position:fixed;inset:0;z-index:-3;background:var(--bg0);transition:background .5s ease}
+body.v-classic.theme-dark #bgfx{
+  background:radial-gradient(900px 500px at 15% -10%, rgba(124,92,255,.18), transparent 62%),
+             radial-gradient(700px 500px at 110% 105%, rgba(91,125,255,.14), transparent 62%),
+             linear-gradient(180deg,var(--bg0),var(--bg1) 55%,var(--bg0));
+}
+body.v-classic.theme-light #bgfx{
+  background:radial-gradient(900px 500px at 15% -10%, rgba(109,74,255,.12), transparent 62%),
+             radial-gradient(700px 500px at 110% 105%, rgba(14,165,233,.10), transparent 62%),
+             linear-gradient(180deg,var(--bg0),var(--bg1));
+}
+body.v-premium.theme-dark #bgfx{
+  background:radial-gradient(1000px 600px at 0% -10%, rgba(168,85,247,.36), transparent 62%),
+             radial-gradient(800px 600px at 110% 100%, rgba(212,175,55,.16), transparent 62%),
+             linear-gradient(180deg,var(--bg0),var(--bg1) 55%,var(--bg0));
+}
+body.v-premium.theme-light #bgfx{
+  background:radial-gradient(1000px 600px at 0% -10%, rgba(147,51,234,.14), transparent 62%),
+             radial-gradient(800px 600px at 110% 100%, rgba(184,134,11,.10), transparent 62%),
+             linear-gradient(180deg,var(--bg0),var(--bg1));
+}
+body.v-cyber.theme-dark #bgfx{
+  background:
+    linear-gradient(rgba(0,229,255,.045) 1px, transparent 1px) 0 0/34px 34px,
+    linear-gradient(90deg, rgba(0,229,255,.045) 1px, transparent 1px) 0 0/34px 34px,
+    radial-gradient(900px 600px at 20% -10%, rgba(0,229,255,.20), transparent 60%),
+    radial-gradient(700px 500px at 110% 105%, rgba(191,0,255,.20), transparent 60%),
+    linear-gradient(180deg,var(--bg0),var(--bg1) 55%,var(--bg0));
+}
+body.v-cyber.theme-light #bgfx{
+  background:
+    linear-gradient(rgba(2,132,199,.06) 1px, transparent 1px) 0 0/34px 34px,
+    linear-gradient(90deg, rgba(2,132,199,.06) 1px, transparent 1px) 0 0/34px 34px,
+    linear-gradient(180deg,var(--bg0),var(--bg1));
+}
+/* V4 romantic floral glow */
+body.v-sumaiya.theme-dark #bgfx{
+  background:
+    radial-gradient(circle at 18% 25%, rgba(249,168,212,.35), transparent 38%),
+    radial-gradient(circle at 82% 70%, rgba(233,213,255,.28), transparent 42%),
+    radial-gradient(circle at 50% 105%, rgba(232,180,184,.32), transparent 48%),
+    radial-gradient(900px 600px at 15% -10%, rgba(249,168,212,.30), transparent 62%),
+    linear-gradient(180deg,var(--bg0),var(--bg1) 55%,var(--bg0));
+}
+body.v-sumaiya.theme-light #bgfx{
+  background:
+    radial-gradient(circle at 18% 25%, rgba(252,231,243,.85), transparent 40%),
+    radial-gradient(circle at 82% 70%, rgba(245,235,255,.75), transparent 44%),
+    radial-gradient(circle at 50% 105%, rgba(252,231,243,.7), transparent 46%),
+    linear-gradient(180deg,var(--bg0),var(--bg1));
+}
+/* V4 floral dot overlay */
+body.v-sumaiya #bgfx::before{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:
+    radial-gradient(circle, rgba(249,168,212,.16) 1.2px, transparent 1.2px),
+    radial-gradient(circle, rgba(233,213,255,.12) 1px, transparent 1px);
+  background-size:32px 32px, 48px 48px;
+  background-position:0 0, 16px 16px;
+  opacity:.85;
+}
+
+#particles{position:fixed;inset:0;z-index:-2;pointer-events:none;opacity:.55}
+body.no-anim #particles{display:none}
+
+/* ============================================================
+   V4 FLOATING DECORATIONS LAYER
+   ============================================================ */
+#decorations{
+  position:fixed;inset:0;pointer-events:none;z-index:-1;
+  overflow:hidden;display:none;
+}
+body.v-sumaiya #decorations{display:block}
+body.no-anim #decorations{display:none!important}
+
+.deco{
+  position:absolute;bottom:-40px;
+  font-size:18px;opacity:0;
+  animation:floatUp linear infinite;
+  filter:drop-shadow(0 0 6px rgba(249,168,212,.7));
+  will-change:transform,opacity;
+}
+@keyframes floatUp{
+  0%{transform:translateY(0) rotate(0deg) translateX(0);opacity:0}
+  8%{opacity:.85}
+  90%{opacity:.75}
+  100%{transform:translateY(-110vh) rotate(360deg) translateX(40px);opacity:0}
+}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+header{
+  position:sticky;top:0;z-index:60;
+  display:flex;align-items:center;gap:10px;
+  padding:calc(10px + env(safe-area-inset-top)) 14px 10px;
+  background:color-mix(in srgb, var(--bg0) 78%, transparent);
+  backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
+  border-bottom:1px solid var(--border);
+  transition:background .4s,border-color .3s;
+}
+body.theme-light header{background:rgba(255,255,255,.82)}
+body.v-sumaiya header{
+  border-bottom:2px solid rgba(249,168,212,.35);
+  background:linear-gradient(180deg, color-mix(in srgb,var(--bg0) 92%, transparent), color-mix(in srgb,var(--bg0) 78%, transparent));
+}
+.brand{display:flex;align-items:center;gap:10px;min-width:0;flex:1}
+.logo{
+  width:40px;height:40px;flex:0 0 40px;border-radius:13px;
+  display:grid;place-items:center;font-size:21px;font-weight:800;
+  background:var(--logo-grad);color:#fff;font-family:var(--font-math);
+  box-shadow:0 6px 18px rgba(0,0,0,.32), inset 0 0 0 1px rgba(255,255,255,.18);
+  transition:background .4s;
+}
+body.v-cyber .logo{box-shadow:0 0 22px rgba(0,229,255,.55), inset 0 0 0 1px rgba(255,255,255,.2)}
+body.v-premium .logo{box-shadow:0 6px 22px rgba(168,85,247,.55), inset 0 0 0 1.2px rgba(212,175,55,.4)}
+body.v-sumaiya .logo{box-shadow:0 6px 22px rgba(236,72,153,.5), inset 0 0 0 1.5px rgba(255,255,255,.35);border-radius:50%}
+body.v-sumaiya .logo::before{content:"";position:absolute;inset:-4px;border-radius:50%;border:2px dashed rgba(249,168,212,.5);animation:spin 14s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+body.no-anim .logo::before{animation:none}
+.brand-name{font-size:13.5px;font-weight:800;letter-spacing:.4px;line-height:1.15;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;position:relative}
+.brand-name span{background:var(--logo-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+body.v-sumaiya .brand-name{font-family:var(--font-love);letter-spacing:.6px}
+.brand-sub{font-size:9px;color:var(--txt-mute);letter-spacing:1.3px;text-transform:uppercase;font-weight:700;margin-top:2px}
+body.v-sumaiya .brand-sub{color:#f9a8d4;letter-spacing:1.6px}
+.hdr-actions{display:flex;align-items:center;gap:6px}
+.icon-btn{
+  width:36px;height:36px;border-radius:11px;display:grid;place-items:center;
+  background:var(--surface);border:1px solid var(--border);color:var(--txt);
+  font-size:15px;font-weight:700;transition:.18s;
+}
+body.v-sumaiya .icon-btn{border-radius:50%;border-color:rgba(249,168,212,.4)}
+.icon-btn:active{transform:scale(.92);background:var(--surface2)}
+.pill{
+  display:flex;align-items:center;gap:5px;padding:6px 10px;border-radius:999px;
+  background:var(--surface);border:1px solid var(--border);font-size:10.5px;font-weight:700;color:var(--txt-dim);
+}
+.pill .dot{width:7px;height:7px;border-radius:50%;background:var(--ok);box-shadow:0 0 8px var(--ok)}
+.pill.off .dot{background:var(--err);box-shadow:0 0 8px var(--err)}
+
+/* ============================================================
+   MAIN
+   ============================================================ */
+main{max-width:660px;margin:0 auto;padding:14px 13px 20px;position:relative}
+.view{display:none;animation:fadeUp .3s ease}
+.view.active{display:block}
+@keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+body.no-anim .view{animation:none}
+
+/* ============================================================
+   CARDS
+   ============================================================ */
+.card{
+  background:var(--card-bg);
+  border:var(--card-border);
+  border-radius:var(--r);
+  box-shadow:var(--card-shadow);
+  padding:15px;margin-bottom:12px;position:relative;overflow:hidden;
+  backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+  transition:background .35s, border-color .3s, box-shadow .35s, border-radius .3s;
+}
+body.v-premium .card::before,
+body.v-sumaiya .card::before{
+  content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
+  background:linear-gradient(140deg,rgba(255,255,255,.10),transparent 42%);opacity:.6;
+}
+body.v-cyber .card{border-radius:13px}
+
+/* V4 Lace-ribbon cards */
+body.v-sumaiya .card{
+  border-radius:22px;
+  border:1.5px solid transparent;
+  background:
+    linear-gradient(var(--card-bg),var(--card-bg)) padding-box,
+    linear-gradient(135deg, #f9a8d4, #e9d5ff, #fbcfe8, #f9a8d4) border-box;
+}
+body.v-sumaiya.theme-dark .card{
+  background:
+    linear-gradient(rgba(60,25,50,.85),rgba(40,20,45,.9)) padding-box,
+    linear-gradient(135deg, #f9a8d4, #e9d5ff, #fbcfe8, #f9a8d4) border-box;
+}
+body.v-sumaiya .card::after{
+  content:"🎀";position:absolute;top:-8px;right:12px;font-size:22px;
+  filter:drop-shadow(0 2px 4px rgba(236,72,153,.35));
+  pointer-events:none;z-index:2;
+}
+
+/* ============================================================
+   SUMAIYA HERO (V4 SPECIAL)
+   ============================================================ */
+.sumaiya-hero{
+  display:none;padding:26px 20px 22px;border-radius:26px;
+  background:linear-gradient(135deg,rgba(249,168,212,.42),rgba(233,213,255,.28),rgba(252,231,243,.35));
+  border:2px solid transparent;
+  background-clip:padding-box;
+  position:relative;text-align:center;margin-bottom:12px;
+  box-shadow:0 12px 34px rgba(236,72,153,.28),inset 0 0 0 2px rgba(255,255,255,.35);
+  overflow:hidden;
+}
+body.v-sumaiya .sumaiya-hero{display:block;animation:fadeUp .5s ease}
+body.v-sumaiya.theme-dark .sumaiya-hero{
+  background:linear-gradient(135deg,rgba(249,168,212,.22),rgba(233,213,255,.14),rgba(232,180,184,.2));
+  box-shadow:0 12px 34px rgba(236,72,153,.35),inset 0 0 0 1.5px rgba(255,255,255,.22);
+}
+.sumaiya-hero::before,.sumaiya-hero::after{
+  content:"🌸";position:absolute;font-size:30px;opacity:.85;
+  filter:drop-shadow(0 2px 6px rgba(236,72,153,.4));
+}
+.sumaiya-hero::before{top:-6px;left:14px;animation:swayL 3.5s ease-in-out infinite}
+.sumaiya-hero::after{bottom:-6px;right:14px;animation:swayR 3.5s ease-in-out infinite}
+@keyframes swayL{0%,100%{transform:rotate(-12deg)}50%{transform:rotate(6deg)}}
+@keyframes swayR{0%,100%{transform:rotate(12deg)}50%{transform:rotate(-6deg)}}
+body.no-anim .sumaiya-hero::before,body.no-anim .sumaiya-hero::after{animation:none}
+.sumaiya-crown{
+  display:inline-block;font-size:34px;margin-bottom:8px;
+  animation:crownFloat 3s ease-in-out infinite;
+  filter:drop-shadow(0 4px 10px rgba(236,72,153,.55));
+}
+@keyframes crownFloat{
+  0%,100%{transform:translateY(0) rotate(-4deg) scale(1)}
+  50%{transform:translateY(-6px) rotate(4deg) scale(1.05)}
+}
+body.no-anim .sumaiya-crown{animation:none}
+.sumaiya-hero h2{
+  font-family:var(--font-love);font-size:23px;font-weight:800;letter-spacing:.8px;
+  background:linear-gradient(135deg,#ec4899,#be185d,#c084fc,#ec4899);
+  background-size:220% auto;-webkit-background-clip:text;background-clip:text;
+  color:transparent;margin:0 0 8px;animation:shimmer 5s linear infinite;
+}
+body.v-sumaiya.theme-dark .sumaiya-hero h2{
+  background:linear-gradient(135deg,#f9a8d4,#fbcfe8,#e9d5ff,#f9a8d4);
+  background-size:220% auto;-webkit-background-clip:text;background-clip:text;color:transparent;
+}
+@keyframes shimmer{0%{background-position:0% center}100%{background-position:200% center}}
+body.no-anim .sumaiya-hero h2{animation:none}
+.sumaiya-hero p{font-size:13px;color:var(--txt-dim);margin:0;font-style:italic;font-family:var(--font-love);line-height:1.7}
+.sumaiya-hero-badge{
+  display:inline-flex;align-items:center;gap:6px;margin-top:12px;
+  padding:6px 14px;border-radius:999px;font-size:11px;font-weight:800;letter-spacing:1.2px;
+  text-transform:uppercase;
+  background:linear-gradient(135deg,#f9a8d4,#ec4899);color:#fff;
+  box-shadow:0 4px 14px rgba(236,72,153,.45);
+}
+
+/* ============================================================
+   WELCOME / SECTIONS
+   ============================================================ */
+.welcome{display:flex;align-items:center;gap:12px}
+.welcome h2{margin:0 0 4px;font-size:17px;font-weight:800;letter-spacing:.2px}
+.welcome p{margin:0;font-size:12px;color:var(--txt-dim);line-height:1.55}
+body.v-sumaiya .welcome h2{font-family:var(--font-love);font-size:18px}
+.welcome-badge{
+  margin-left:auto;flex:0 0 auto;padding:9px 12px;border-radius:14px;
+  background:var(--badge-grad);border:1px solid var(--border2);
+  font-size:13px;font-weight:800;color:var(--txt);white-space:nowrap;
+}
+body.v-sumaiya .welcome-badge{border-radius:50%;padding:10px 12px}
+.section-head{display:flex;align-items:center;justify-content:space-between;margin:16px 2px 9px}
+.section-head h3{margin:0;font-size:13.5px;font-weight:800;color:var(--txt);letter-spacing:.3px}
+body.v-sumaiya .section-head h3{font-family:var(--font-love);font-size:14px}
+.link{font-size:12px;font-weight:700;color:var(--accent3);padding:4px 2px}
+.label{font-size:11px;font-weight:700;letter-spacing:.9px;text-transform:uppercase;color:var(--txt-mute);margin-bottom:8px}
+
+/* ============================================================
+   INPUTS
+   ============================================================ */
+.math-input{
+  width:100%;resize:vertical;min-height:56px;
+  background:var(--input-bg);
+  border:1px solid var(--border);border-radius:var(--r2);
+  padding:13px 14px;color:var(--txt);
+  font-family:var(--font-math);font-size:19px;line-height:1.45;
+  outline:none;transition:.18s;
+}
+.math-input.big{font-size:22px;min-height:88px}
+.math-input:focus{border-color:var(--accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 22%, transparent)}
+.math-input::placeholder{color:var(--txt-mute);font-family:var(--font);font-size:14px}
+body.v-cyber .math-input:focus{box-shadow:0 0 0 2px rgba(0,229,255,.4), 0 0 20px rgba(0,229,255,.18)}
+body.v-sumaiya .math-input{border-radius:18px;border-color:rgba(249,168,212,.4)}
+body.v-sumaiya .math-input:focus{border-color:#ec4899;box-shadow:0 0 0 3px rgba(236,72,153,.22),0 0 20px rgba(236,72,153,.2)}
+
+/* ============================================================
+   BUTTONS
+   ============================================================ */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:7px;
+  padding:12px 18px;border-radius:14px;font-weight:700;font-size:14px;
+  background:var(--surface2);border:1px solid var(--border);color:var(--txt);
+  transition:.16s;white-space:nowrap;
+}
+.btn:active{transform:scale(.96)}
+.btn.primary{background:var(--btn-bg);border-color:transparent;color:var(--accent-txt);box-shadow:var(--btn-shadow)}
+.btn.ghost{background:transparent}
+.btn.sm{padding:9px 14px;font-size:12.5px;border-radius:11px}
+.btn.full{width:100%}
+.btn:disabled{opacity:.45;pointer-events:none}
+.row{display:flex;gap:9px;margin-top:11px;flex-wrap:wrap}
+.row .btn{flex:1;min-width:0}
+
+/* V4 Cute buttons */
+body.v-sumaiya .btn{border-radius:999px;padding:12px 20px}
+body.v-sumaiya .btn.primary{
+  background:linear-gradient(135deg,#f9a8d4,#ec4899);
+  color:#fff;
+  box-shadow:0 8px 22px rgba(236,72,153,.42),inset 0 0 0 1px rgba(255,255,255,.35);
+}
+body.v-sumaiya .btn.primary::before{content:"💕";margin-right:4px;font-size:14px}
+body.v-sumaiya .btn.ghost{border-color:rgba(249,168,212,.45);background:rgba(255,255,255,.04)}
+body.v-sumaiya.theme-light .btn.ghost{background:rgba(252,231,243,.5)}
+
+/* ============================================================
+   SYMBOL PAD
+   ============================================================ */
+.sympad{
+  margin-top:11px;display:grid;grid-template-columns:repeat(8,1fr);gap:5px;
+  background:var(--surface);
+  border:1px solid var(--border);border-radius:var(--r2);
+  padding:7px;
+}
+body.v-cyber .sympad{border-color:rgba(0,229,255,.24)}
+body.v-sumaiya .sympad{border-radius:20px;border-color:rgba(249,168,212,.4);background:rgba(255,255,255,.05)}
+body.v-sumaiya.theme-light .sympad{background:rgba(252,231,243,.4)}
+.sym{
+  padding:9px 0;border-radius:9px;font-family:var(--font-math);font-size:15px;
+  background:var(--surface2);border:1px solid var(--border);color:var(--txt);
+  transition:.12s;font-weight:700;min-height:36px;display:grid;place-items:center;
+  touch-action:manipulation;
+}
+body.v-sumaiya .sym{border-radius:12px}
+.sym:active{transform:scale(.9);background:var(--accent);color:var(--accent-txt);border-color:var(--accent)}
+body.v-sumaiya .sym:active{background:#ec4899;color:#fff;border-color:#ec4899}
+.sym.fn{font-family:var(--font);font-size:12px;letter-spacing:.2px}
+.sym.warn{color:var(--err);border-color:color-mix(in srgb,var(--err) 30%, transparent)}
+
+/* ============================================================
+   ACTION CARDS / CHIPS
+   ============================================================ */
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin-bottom:12px}
+.action-card{
+  display:flex;flex-direction:column;align-items:flex-start;gap:3px;
+  padding:15px;border-radius:var(--r);
+  background:var(--card-bg);border:var(--card-border);
+  box-shadow:var(--card-shadow);text-align:left;transition:.18s;
+  position:relative;overflow:hidden;
+}
+.action-card::after{content:"";position:absolute;right:-24px;top:-24px;width:80px;height:80px;border-radius:50%;background:var(--badge-grad);opacity:.7}
+.action-card:active{transform:scale(.97)}
+.action-card .ai{font-size:24px;margin-bottom:4px}
+.action-card b{font-size:14px;font-weight:800}
+.action-card small{font-size:11px;color:var(--txt-mute)}
+body.v-sumaiya .action-card{
+  border-radius:22px;
+  border:1.5px solid rgba(249,168,212,.5);
+  background:linear-gradient(155deg,rgba(255,240,248,.85),rgba(252,231,243,.55));
+}
+body.v-sumaiya.theme-dark .action-card{
+  background:linear-gradient(155deg,rgba(249,168,212,.16),rgba(232,180,184,.12));
+}
+
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{
+  padding:8px 13px;border-radius:999px;font-size:12px;font-weight:700;
+  background:var(--surface);border:1px solid var(--border);color:var(--txt-dim);
+  transition:.16s;white-space:nowrap;
+}
+.chip:active{transform:scale(.94);background:var(--surface2)}
+.chip.active{background:var(--badge-grad);border-color:var(--border2);color:var(--txt)}
+body.v-sumaiya .chip.active{
+  background:linear-gradient(135deg,#f9a8d4,#ec4899);color:#fff;border-color:transparent;
+  box-shadow:0 4px 14px rgba(236,72,153,.35);
+}
+
+/* ============================================================
+   HISTORY
+   ============================================================ */
+.stack{display:flex;flex-direction:column;gap:9px}
+.hist-item{
+  display:flex;align-items:center;gap:11px;padding:12px 13px;border-radius:14px;
+  background:var(--surface);border:1px solid var(--border);transition:.16s;
+}
+body.v-sumaiya .hist-item{border-radius:18px;border-color:rgba(249,168,212,.35)}
+.hist-item:active{transform:scale(.985);background:var(--surface2)}
+.hist-q{font-family:var(--font-math);font-size:14.5px;font-weight:700;color:var(--txt);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.hist-a{font-family:var(--font-math);font-size:12.5px;color:var(--ok);font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.hist-main{flex:1;min-width:0}
+.hist-del{width:30px;height:30px;flex:0 0 30px;border-radius:9px;display:grid;place-items:center;background:color-mix(in srgb,var(--err) 16%, transparent);color:var(--err);font-size:14px;font-weight:800}
+.empty{padding:26px 14px;text-align:center;color:var(--txt-mute);font-size:13px;border:1px dashed var(--border);border-radius:14px}
+.empty .em{font-size:30px;display:block;margin-bottom:8px;opacity:.65}
+
+/* ============================================================
+   SOLUTION
+   ============================================================ */
+.sol-card{padding:0;overflow:hidden}
+.sol-head{display:flex;align-items:center;gap:9px;padding:13px 15px;background:var(--badge-grad);border-bottom:1px solid var(--border)}
+body.v-sumaiya .sol-head{background:linear-gradient(100deg,rgba(249,168,212,.35),rgba(233,213,255,.2))}
+.badge{font-size:10px;font-weight:800;letter-spacing:.8px;text-transform:uppercase;padding:4px 9px;border-radius:999px;background:var(--surface2);border:1px solid var(--border2);color:var(--txt)}
+.sol-type{font-size:13px;font-weight:800;color:var(--txt)}
+.sol-q{padding:15px;font-family:var(--font-math);font-size:21px;font-weight:700;color:var(--txt);word-break:break-word;line-height:1.4;border-bottom:1px solid var(--border);background:var(--input-bg)}
+.steps{padding:6px 15px 4px}
+.step{display:flex;gap:11px;padding:11px 0;border-bottom:1px dashed var(--border)}
+.step:last-child{border-bottom:none}
+.step-n{
+  flex:0 0 24px;width:24px;height:24px;border-radius:8px;display:grid;place-items:center;
+  font-size:11px;font-weight:800;background:var(--btn-bg);color:var(--accent-txt);margin-top:1px;
+}
+body.v-sumaiya .step-n{border-radius:50%}
+.step-b{flex:1;min-width:0}
+.step-l{font-size:11px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;color:var(--txt-mute);margin-bottom:4px}
+.step-v{font-family:var(--font-math);font-size:15px;color:var(--txt);line-height:1.6;word-break:break-word;white-space:pre-wrap}
+.answer-box{
+  margin:6px 15px 13px;padding:15px;border-radius:15px;
+  background:linear-gradient(135deg,color-mix(in srgb,var(--ok) 16%, transparent),transparent);
+  border:1px solid color-mix(in srgb,var(--ok) 38%, transparent);
+}
+body.v-sumaiya .answer-box{
+  background:linear-gradient(135deg,rgba(249,168,212,.22),rgba(233,213,255,.14));
+  border:2px dashed rgba(236,72,153,.5);
+  border-radius:20px;position:relative;
+}
+body.v-sumaiya .answer-box::before{content:"✨";position:absolute;top:6px;right:12px;font-size:18px}
+body.v-sumaiya .answer-box .ab-l{color:#ec4899}
+.answer-box .ab-l{font-size:10.5px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--ok);margin-bottom:6px}
+.answer-box .ab-v{font-family:var(--font-math);font-size:23px;font-weight:800;color:var(--txt);word-break:break-word;line-height:1.35}
+.verify{margin:0 15px 10px;padding:11px 13px;border-radius:12px;font-size:12.5px;line-height:1.55;background:var(--input-bg);border:1px solid var(--border);color:var(--txt-dim);font-family:var(--font-math)}
+.explain{margin:0 15px 13px;padding:11px 13px;border-radius:12px;font-size:12.5px;line-height:1.65;background:var(--surface);border:1px solid var(--border);color:var(--txt-dim)}
+.sol-actions{display:flex;gap:8px;padding:0 15px 15px;flex-wrap:wrap}
+.sol-actions .btn{flex:1;min-width:110px}
+
+/* ============================================================
+   ERROR
+   ============================================================ */
+.err-box{
+  margin-top:11px;padding:13px 15px;border-radius:14px;
+  background:color-mix(in srgb,var(--err) 13%, transparent);
+  border:1px solid color-mix(in srgb,var(--err) 40%, transparent);
+  color:var(--txt);font-size:13px;line-height:1.6;
+  animation:shake .32s ease;
+}
+@keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+body.no-anim .err-box{animation:none}
+.err-box b{color:var(--err);display:block;margin-bottom:5px;font-size:12.5px}
+.err-box .ex{margin-top:7px;font-family:var(--font-math);font-size:12.5px;color:var(--txt-dim)}
+.err-box .ex span{color:var(--ok);font-weight:700}
+
+/* ============================================================
+   SCANNER
+   ============================================================ */
+#videoWrap{position:relative;border-radius:var(--r);overflow:hidden;background:#000;border:1px solid var(--border);aspect-ratio:4/3;display:grid;place-items:center}
+#video{width:100%;height:100%;object-fit:cover;display:none}
+#video.on{display:block}
+#scanCanvas{display:none;width:100%;border-radius:var(--r);border:1px solid var(--border)}
+#camPlaceholder{display:flex;flex-direction:column;align-items:center;gap:9px;color:var(--txt-mute);font-size:12.5px;padding:20px;text-align:center}
+#camPlaceholder .big{font-size:38px;opacity:.55}
+.ocr-note{font-size:11.5px;line-height:1.6;color:var(--warn);margin-top:9px;padding:9px 11px;border-radius:11px;background:color-mix(in srgb,var(--warn) 10%, transparent);border:1px solid color-mix(in srgb,var(--warn) 28%, transparent)}
+body.v-sumaiya .ocr-note{background:rgba(249,168,212,.14);border-color:rgba(236,72,153,.3);color:#be185d}
+
+/* ============================================================
+   PRACTICE
+   ============================================================ */
+.stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-bottom:12px}
+.stat{padding:13px 9px;border-radius:14px;text-align:center;background:var(--surface);border:1px solid var(--border)}
+body.v-sumaiya .stat{border-radius:18px;border-color:rgba(249,168,212,.4);background:linear-gradient(155deg,rgba(255,240,248,.5),rgba(252,231,243,.2))}
+body.v-sumaiya.theme-dark .stat{background:linear-gradient(155deg,rgba(249,168,212,.12),rgba(232,180,184,.08))}
+.stat .sv{font-size:20px;font-weight:800;font-family:var(--font-math);color:var(--txt)}
+body.v-sumaiya .stat .sv{background:linear-gradient(135deg,#ec4899,#be185d);-webkit-background-clip:text;background-clip:text;color:transparent}
+.stat .sl{font-size:10px;font-weight:700;letter-spacing:.7px;text-transform:uppercase;color:var(--txt-mute);margin-top:3px}
+.q-box{padding:22px 16px;border-radius:15px;text-align:center;background:var(--badge-grad);border:1px solid var(--border2);margin-bottom:13px}
+body.v-sumaiya .q-box{border-radius:20px;border:1.5px dashed rgba(236,72,153,.42);background:linear-gradient(135deg,rgba(249,168,212,.2),rgba(233,213,255,.14))}
+.q-text{font-family:var(--font-math);font-size:26px;font-weight:800;color:var(--txt);line-height:1.4;word-break:break-word}
+.q-sub{font-size:11.5px;color:var(--txt-dim);margin-top:8px}
+.feedback{padding:13px 15px;border-radius:14px;font-size:13px;line-height:1.6;margin-top:11px;display:none}
+.feedback.show{display:block;animation:fadeUp .24s ease}
+.feedback.ok{background:color-mix(in srgb,var(--ok) 15%, transparent);border:1px solid color-mix(in srgb,var(--ok) 42%, transparent)}
+.feedback.bad{background:color-mix(in srgb,var(--err) 15%, transparent);border:1px solid color-mix(in srgb,var(--err) 42%, transparent)}
+.feedback b{display:block;margin-bottom:5px;font-size:13px}
+.feedback.ok b{color:var(--ok)}
+.feedback.bad b{color:var(--err)}
+
+/* ============================================================
+   MODAL
+   ============================================================ */
+.modal{position:fixed;inset:0;z-index:200;display:none;background:rgba(3,6,20,.72);backdrop-filter:blur(6px);align-items:flex-end;justify-content:center}
+.modal.show{display:flex}
+.modal-sheet{
+  width:100%;max-width:660px;max-height:88vh;overflow-y:auto;
+  background:var(--bg2);border:1px solid var(--border2);border-bottom:none;
+  border-radius:24px 24px 0 0;padding:18px 16px calc(22px + env(safe-area-inset-bottom));
+  animation:sheetUp .3s cubic-bezier(.2,.9,.3,1);
+}
+body.theme-dark .modal-sheet{background:linear-gradient(170deg,var(--bg2),var(--bg1))}
+body.theme-light .modal-sheet{background:linear-gradient(170deg,#fff,#f3f6ff)}
+body.v-sumaiya .modal-sheet{border-top:2px solid rgba(249,168,212,.55);border-radius:28px 28px 0 0}
+@keyframes sheetUp{from{transform:translateY(100%)}to{transform:none}}
+body.no-anim .modal-sheet{animation:none}
+.modal-grab{width:38px;height:4px;border-radius:3px;background:var(--border2);margin:0 auto 14px}
+.modal-title{font-size:15px;font-weight:800;margin:0 0 14px}
+body.v-sumaiya .modal-title{font-family:var(--font-love);font-size:17px;background:linear-gradient(135deg,#ec4899,#c084fc);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* Settings */
+.set-item{display:flex;align-items:center;gap:12px;padding:13px 2px;border-bottom:1px solid var(--border)}
+.set-item:last-child{border-bottom:none}
+.set-item .si-ic{font-size:17px;width:24px;text-align:center;opacity:.9}
+.set-item .si-b{flex:1;min-width:0}
+.set-item .si-t{font-size:13.5px;font-weight:700}
+.set-item .si-d{font-size:11px;color:var(--txt-mute);margin-top:2px;line-height:1.4}
+.switch{width:46px;height:26px;border-radius:999px;background:var(--surface2);position:relative;transition:.22s;flex:0 0 46px;border:1px solid var(--border)}
+.switch::after{content:"";position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:50%;background:#fff;transition:.22s;box-shadow:0 2px 6px rgba(0,0,0,.3)}
+.switch.on{background:var(--btn-bg);border-color:transparent}
+.switch.on::after{left:22px}
+select.sel{padding:9px 13px;border-radius:11px;background:var(--surface2);border:1px solid var(--border);color:var(--txt);font-size:13px;font-weight:700;outline:none}
+body.v-sumaiya select.sel{border-radius:999px;border-color:rgba(249,168,212,.4)}
+
+/* Theme preview cards */
+.theme-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:8px}
+.theme-card{
+  padding:12px;border-radius:14px;background:var(--surface);border:1.5px solid var(--border);
+  display:flex;flex-direction:column;gap:8px;transition:.18s;text-align:left;
+}
+.theme-card:active{transform:scale(.97)}
+.theme-card.active{border-color:var(--accent);box-shadow:0 0 0 2px color-mix(in srgb,var(--accent) 30%, transparent),var(--card-shadow)}
+body.v-sumaiya .theme-card{border-radius:18px}
+.theme-swatches{display:flex;gap:4px}
+.theme-swatches i{display:block;width:100%;height:18px;border-radius:5px}
+.theme-name{font-size:12.5px;font-weight:800;color:var(--txt);letter-spacing:.3px}
+.theme-tag{font-size:10px;color:var(--txt-mute);text-transform:uppercase;letter-spacing:.7px;font-weight:700}
+
+/* Developer card */
+.dev-card{
+  margin:14px 0;padding:20px 16px;border-radius:18px;text-align:center;
+  background:linear-gradient(135deg,rgba(168,85,247,.22),rgba(212,175,55,.14));
+  border:1.5px solid rgba(212,175,55,.45);
+  position:relative;overflow:hidden;
+}
+.dev-card::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 30% 20%,rgba(255,255,255,.14),transparent 50%);pointer-events:none}
+.dev-tag{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--txt-mute);font-weight:700;margin-bottom:6px}
+.dev-name{
+  font-size:24px;font-weight:900;letter-spacing:3px;
+  background:linear-gradient(135deg,#a855f7,#d4af37,#a855f7);
+  background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;
+  animation:shimmer 4s linear infinite;margin:0;
+}
+body.no-anim .dev-name{animation:none}
+.dev-sub{font-size:11.5px;color:var(--txt-dim);margin-top:6px;font-weight:600}
+.dev-line{width:40px;height:2px;background:linear-gradient(90deg,#a855f7,#d4af37);border-radius:2px;margin:10px auto 0}
+
+/* Dedication card — enhanced */
+.dedication-card{
+  margin:14px 0;padding:26px 22px 22px;border-radius:24px;
+  background:linear-gradient(135deg,rgba(249,168,212,.4),rgba(233,213,255,.28),rgba(252,231,243,.35));
+  border:2px solid transparent;
+  background-clip:padding-box;
+  position:relative;overflow:hidden;
+  box-shadow:0 14px 34px rgba(236,72,153,.28),inset 0 0 0 2px rgba(255,255,255,.4);
+}
+body.theme-light .dedication-card{
+  background:linear-gradient(135deg,rgba(252,231,243,.95),rgba(245,235,255,.9),rgba(252,231,243,.85));
+  box-shadow:0 14px 34px rgba(236,72,153,.18),inset 0 0 0 1.5px rgba(236,72,153,.3);
+}
+body.v-sumaiya.theme-dark .dedication-card{
+  background:linear-gradient(135deg,rgba(249,168,212,.22),rgba(233,213,255,.14),rgba(232,180,184,.18));
+  box-shadow:0 14px 34px rgba(236,72,153,.35),inset 0 0 0 1.5px rgba(255,255,255,.22);
+}
+.dedication-card::before{
+  content:"♥";position:absolute;top:10px;right:16px;font-size:46px;
+  color:rgba(236,72,153,.35);animation:heartbeat 1.8s ease-in-out infinite;
+  filter:drop-shadow(0 2px 8px rgba(236,72,153,.5));
+}
+.dedication-card::after{
+  content:"🌹";position:absolute;bottom:8px;left:14px;font-size:26px;
+  opacity:.85;filter:drop-shadow(0 2px 6px rgba(236,72,153,.4));
+  animation:swayL 4s ease-in-out infinite;
+}
+body.no-anim .dedication-card::before,body.no-anim .dedication-card::after{animation:none}
+@keyframes heartbeat{0%,100%{transform:scale(1)}50%{transform:scale(1.2)}}
+.ded-title{
+  font-family:var(--font-love);font-size:17px;font-weight:800;
+  background:linear-gradient(135deg,#ec4899,#be185d,#c084fc);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  margin:0 0 10px;letter-spacing:.5px;position:relative;z-index:1;
+}
+body.v-sumaiya.theme-dark .ded-title{
+  background:linear-gradient(135deg,#f9a8d4,#fbcfe8,#e9d5ff);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.ded-msg{font-size:13px;line-height:1.85;color:var(--txt-dim);margin:0;font-weight:500;position:relative;z-index:1}
+body.v-sumaiya.theme-dark .ded-msg{color:#e6c5d6}
+.ded-foot{
+  font-size:11.5px;color:#be185d;margin-top:14px;font-weight:800;letter-spacing:.6px;
+  position:relative;z-index:1;font-family:var(--font-love);font-style:italic;
+}
+body.v-sumaiya.theme-dark .ded-foot{color:#f9a8d4}
+
+/* ============================================================
+   BOTTOM NAV
+   ============================================================ */
+nav.bottom{
+  position:fixed;bottom:0;left:0;right:0;z-index:70;
+  display:grid;grid-template-columns:repeat(5,1fr);
+  background:color-mix(in srgb,var(--bg0) 86%, transparent);
+  backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+  border-top:1px solid var(--border);
+  padding:6px 3px calc(6px + env(safe-area-inset-bottom));
+  transition:background .4s;
+}
+body.theme-light nav.bottom{background:rgba(255,255,255,.9)}
+body.v-sumaiya nav.bottom{
+  border-top:2px solid rgba(249,168,212,.45);
+  background:linear-gradient(180deg, color-mix(in srgb,var(--bg0) 92%, transparent), color-mix(in srgb,var(--bg1) 86%, transparent));
+}
+body.v-sumaiya.theme-light nav.bottom{
+  background:linear-gradient(180deg,rgba(255,250,252,.96),rgba(255,245,250,.9));
+  border-top:2px solid rgba(236,72,153,.28);
+}
+.nav-item{
+  display:flex;flex-direction:column;align-items:center;gap:2px;
+  padding:7px 2px;border-radius:12px;color:var(--txt-mute);transition:.16s;
+  font-size:9.5px;font-weight:700;letter-spacing:.2px;
+}
+.nav-item .ni{font-size:19px;line-height:1;transition:.18s}
+.nav-item.active{color:var(--txt)}
+.nav-item.active .ni{transform:translateY(-2px) scale(1.1);filter:drop-shadow(0 0 8px color-mix(in srgb,var(--accent) 70%, transparent))}
+body.v-sumaiya .nav-item.active .ni{filter:drop-shadow(0 0 10px rgba(236,72,153,1))}
+.nav-item.active::after{content:"";width:16px;height:2.5px;border-radius:2px;margin-top:1px;background:var(--btn-bg)}
+body.v-sumaiya .nav-item.active::after{background:linear-gradient(90deg,#f9a8d4,#ec4899)}
+.nav-item:active{transform:scale(.93)}
+
+/* ============================================================
+   MISC
+   ============================================================ */
+.muted{color:var(--txt-mute);font-size:12px}
+.hidden{display:none!important}
+.spinner{width:18px;height:18px;border-radius:50%;border:2.5px solid rgba(255,255,255,.28);border-top-color:#fff;animation:spin .7s linear infinite;display:inline-block}
+.loading-overlay{position:fixed;inset:0;z-index:500;display:grid;place-items:center;background:var(--bg0);transition:opacity .45s ease}
+.loading-overlay.hide{opacity:0;pointer-events:none}
+.load-inner{text-align:center}
+.load-logo{
+  width:78px;height:78px;border-radius:22px;margin:0 auto 18px;
+  display:grid;place-items:center;font-size:38px;font-family:var(--font-math);font-weight:800;color:#fff;
+  background:var(--logo-grad);box-shadow:0 0 44px color-mix(in srgb,var(--accent) 55%, transparent);
+  animation:pulse 1.6s ease-in-out infinite;
+}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.07)}}
+.load-title{font-size:16px;font-weight:800;letter-spacing:1.2px}
+.load-sub{font-size:11px;color:var(--txt-mute);margin-top:6px;letter-spacing:2px;text-transform:uppercase}
+.load-bar{width:150px;height:3px;border-radius:3px;background:var(--surface2);margin:18px auto 0;overflow:hidden}
+.load-bar i{display:block;height:100%;width:40%;border-radius:3px;background:var(--btn-bg);animation:slide 1.2s ease-in-out infinite}
+@keyframes slide{0%{transform:translateX(-100%)}100%{transform:translateX(350%)}}
+
+/* V4 themed loader */
+body.v-sumaiya .load-logo{
+  border-radius:50%;
+  background:linear-gradient(135deg,#f9a8d4,#ec4899 55%,#c084fc);
+  box-shadow:0 0 44px rgba(236,72,153,.7);
+}
+body.v-sumaiya .load-title{font-family:var(--font-love);background:linear-gradient(135deg,#ec4899,#c084fc);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+.toast{
+  position:fixed;bottom:calc(var(--nav-h) + 16px);left:50%;transform:translateX(-50%) translateY(20px);
+  padding:11px 20px;border-radius:999px;font-size:12.5px;font-weight:700;
+  background:var(--btn-bg);color:var(--accent-txt);box-shadow:var(--btn-shadow);
+  z-index:300;opacity:0;pointer-events:none;transition:.26s;white-space:nowrap;max-width:90vw;
+}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+body.v-sumaiya .toast{background:linear-gradient(135deg,#f9a8d4,#ec4899);color:#fff}
+
+/* V4 greeting overlay */
+.greeting-overlay{
+  position:fixed;inset:0;z-index:400;display:none;align-items:center;justify-content:center;
+  background:rgba(20,5,20,.6);backdrop-filter:blur(8px);
+  animation:fadeUp .4s ease;
+}
+.greeting-overlay.show{display:flex}
+.greeting-inner{
+  background:linear-gradient(135deg,rgba(255,240,248,.98),rgba(250,235,255,.95));
+  padding:32px 24px;border-radius:28px;text-align:center;max-width:88vw;
+  border:2px solid rgba(249,168,212,.55);
+  box-shadow:0 20px 60px rgba(236,72,153,.4),inset 0 0 0 2px rgba(255,255,255,.7);
+  animation:crownFloat 3s ease-in-out infinite;
+}
+body.theme-dark .greeting-inner{
+  background:linear-gradient(135deg,rgba(60,25,50,.96),rgba(45,20,50,.95));
+  border-color:rgba(249,168,212,.4);
+}
+.greeting-inner .g-emoji{font-size:56px;display:block;margin-bottom:10px}
+.greeting-inner h2{
+  font-family:var(--font-love);font-size:22px;margin:0 0 8px;
+  background:linear-gradient(135deg,#ec4899,#be185d,#c084fc);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.greeting-inner p{font-size:13px;line-height:1.7;color:var(--txt-dim);margin:0 0 14px;font-style:italic}
+.greeting-inner button{
+  padding:10px 24px;border-radius:999px;font-weight:800;font-size:13px;
+  background:linear-gradient(135deg,#f9a8d4,#ec4899);color:#fff;
+  box-shadow:0 6px 18px rgba(236,72,153,.4);letter-spacing:.5px;
+}
+</style>
+</head>
+<body class="v-classic theme-dark">
+
+<div id="bgfx"></div>
+<canvas id="particles"></canvas>
+<div id="decorations"></div>
+
+<!-- V4 WELCOME GREETING OVERLAY -->
+<div class="greeting-overlay" id="greetingOverlay">
+  <div class="greeting-inner">
+    <span class="g-emoji" id="greetEmoji">👑</span>
+    <h2 id="greetTitle">SUMAIYA SPECIAL 💕</h2>
+    <p id="greetMsg">স্বাগতম সুমাইয়া! 🌸<br>এই বিশেষ এডিশনটি শুধু তোমার জন্য ভালোবাসা দিয়ে সাজানো।</p>
+    <button id="greetClose">চলো শুরু করি 💖</button>
+  </div>
+</div>
+
+<!-- LOADING -->
+<div class="loading-overlay" id="loader">
+  <div class="load-inner">
+    <div class="load-logo">∑</div>
+    <div class="load-title">MOMIN MATH AI PRO</div>
+    <div class="load-sub">Ultimate · 4 Editions</div>
+    <div class="load-bar"><i></i></div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="brand">
+    <div class="logo">∑</div>
+    <div style="min-width:0">
+      <div class="brand-name">MOMIN MATH <span>AI PRO</span></div>
+      <div class="brand-sub" id="brandSub">Normal Edition</div>
+    </div>
+  </div>
+  <div class="hdr-actions">
+    <button class="pill" id="netPill"><span class="dot"></span><span id="netTxt">Online</span></button>
+    <button class="icon-btn" id="langBtn">বাং</button>
+    <button class="icon-btn" id="settingsBtn">⚙</button>
+  </div>
+</header>
+
+<!-- MAIN -->
+<main>
+
+  <!-- HOME -->
+  <section class="view active" id="view-home">
+    <!-- V4 SPECIAL HERO -->
+    <div class="sumaiya-hero">
+      <span class="sumaiya-crown">👑</span>
+      <h2>SUMAIYA SPECIAL EDITION</h2>
+      <p>Made with love, just for you 💕<br>একটি বিশেষ উপহার, একটি বিশেষ মানুষের জন্য 🌸</p>
+      <div class="sumaiya-hero-badge">✨ EXCLUSIVELY YOURS ✨</div>
+    </div>
+
+    <div class="card welcome">
+      <div>
+        <h2 id="welcomeTitle">স্বাগতম 👋</h2>
+        <p id="welcomeSub">গণিত সমাধান করুন — সহজ, দ্রুত ও ধাপে ধাপে।</p>
+      </div>
+      <div class="welcome-badge" id="streakBadge">🔥 0</div>
+    </div>
+
+    <div class="card">
+      <div class="label" data-i18n="smartInput">স্মার্ট ইনপুট</div>
+      <textarea id="homeInput" class="math-input" rows="2" placeholder="যেমন: 2x + 5 = 15"></textarea>
+      <div class="row">
+        <button class="btn primary" id="homeSolveBtn" data-i18n="solve">সমাধান করুন</button>
+        <button class="btn ghost" id="homeClearBtn" data-i18n="clear">মুছুন</button>
+      </div>
+    </div>
+
+    <div class="grid2">
+      <button class="action-card" id="goScanBtn">
+        <span class="ai">📷</span>
+        <b data-i18n="scanMath">স্ক্যান ম্যাথ</b>
+        <small data-i18n="cameraOrImage">ক্যামেরা / ছবি</small>
+      </button>
+      <button class="action-card" id="goSolveBtn">
+        <span class="ai">✍️</span>
+        <b data-i18n="manualSolve">ম্যানুয়াল</b>
+        <small data-i18n="typeAndSolve">লিখে সমাধান</small>
+      </button>
+    </div>
+
+    <div class="section-head"><h3 data-i18n="quickCategories">দ্রুত ক্যাটাগরি</h3></div>
+    <div class="chips" id="quickCats"></div>
+
+    <div class="section-head">
+      <h3 data-i18n="recentHistory">সাম্প্রতিক</h3>
+      <button class="link" id="seeAllHist" data-i18n="viewAll">সব দেখুন</button>
+    </div>
+    <div id="homeRecent" class="stack"></div>
+
+    <div class="card" style="display:flex;align-items:center;gap:12px">
+      <div style="flex:1">
+        <b data-i18n="dailyPractice">দৈনিক অনুশীলন</b>
+        <p class="muted" style="margin:4px 0 0" id="dailyLine">স্কোর: 0 / 0</p>
+      </div>
+      <button class="btn primary sm" id="goPracticeBtn" data-i18n="startPractice">শুরু করুন</button>
+    </div>
+  </section>
+
+  <!-- SOLVE -->
+  <section class="view" id="view-solve">
+    <div class="card">
+      <div class="label" data-i18n="typeProblem">গণিত সমস্যা লিখুন</div>
+      <textarea id="solveInput" class="math-input big" rows="3" placeholder="যেমন: x² - 5x + 6 = 0"></textarea>
+
+      <div class="sympad" id="symbolPad"></div>
+
+      <div class="row">
+        <button class="btn primary" id="solveBtn" data-i18n="solve">সমাধান করুন</button>
+        <button class="btn ghost" id="solveClearBtn" data-i18n="clear">মুছুন</button>
+        <button class="btn ghost" id="solveScanBtn" style="flex:0 0 54px">📷</button>
+      </div>
+      <div id="solveError" class="err-box hidden"></div>
+    </div>
+
+    <div class="section-head"><h3 data-i18n="examples">উদাহরণ</h3></div>
+    <div class="chips" id="exampleChips"></div>
+
+    <div id="solutionOut" style="margin-top:13px"></div>
+  </section>
+
+  <!-- SCAN -->
+  <section class="view" id="view-scan">
+    <div class="card">
+      <div class="label" data-i18n="cameraScan">ক্যামেরা স্ক্যান</div>
+      <div id="videoWrap">
+        <video id="video" playsinline autoplay muted></video>
+        <canvas id="scanCanvas"></canvas>
+        <div id="camPlaceholder">
+          <div class="big">📷</div>
+          <div data-i18n="camHint">ক্যামেরা চালু করুন অথবা নিচ থেকে ছবি আপলোড করুন</div>
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn primary" id="startCamBtn" data-i18n="startCamera">ক্যামেরা চালু</button>
+        <button class="btn ghost" id="captureBtn" disabled data-i18n="capture">ছবি তুলুন</button>
+      </div>
+      <div class="row">
+        <button class="btn ghost" id="uploadBtn" data-i18n="uploadImage">ছবি আপলোড</button>
+        <button class="btn ghost" id="rotateBtn" data-i18n="rotate">ঘোরান</button>
+        <button class="btn ghost" id="filterBtn" data-i18n="enhance">উন্নত করুন</button>
+      </div>
+      <input type="file" id="fileInput" accept="image/*" style="display:none" />
+      <div class="row">
+        <button class="btn primary full" id="ocrBtn" disabled data-i18n="extractText">টেক্সট বের করুন (OCR)</button>
+      </div>
+      <div class="ocr-note" data-i18n="handwrittenNote">⚠️ OCR মূলত প্রিন্টেড গণিতের জন্য। হাতের লেখায় ফলাফল ভুল হতে পারে — নিচে টেক্সট এডিট করুন।</div>
+    </div>
+    <div class="card">
+      <div class="label" data-i18n="extractedText">OCR টেক্সট (এডিটযোগ্য)</div>
+      <textarea id="ocrText" class="math-input" rows="3" placeholder="OCR ফলাফল এখানে আসবে…"></textarea>
+      <div class="row">
+        <button class="btn primary" id="ocrSolveBtn" data-i18n="solveThis">এটি সমাধান করুন</button>
+        <button class="btn ghost" id="ocrClearBtn" data-i18n="clear">মুছুন</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRACTICE -->
+  <section class="view" id="view-practice">
+    <div class="stat-row">
+      <div class="stat"><div class="sv" id="pScore">0</div><div class="sl" data-i18n="score">স্কোর</div></div>
+      <div class="stat"><div class="sv" id="pTotal">0</div><div class="sl" data-i18n="attempted">চেষ্টা</div></div>
+      <div class="stat"><div class="sv" id="pStreak">0</div><div class="sl" data-i18n="streak">স্ট্রিক</div></div>
+    </div>
+    <div class="card">
+      <div class="label" data-i18n="difficulty">কঠিনতা</div>
+      <div class="chips" id="levelChips">
+        <button class="chip active" data-level="easy" data-i18n="easy">সহজ</button>
+        <button class="chip" data-level="medium" data-i18n="medium">মাঝারি</button>
+        <button class="chip" data-level="hard" data-i18n="hard">কঠিন</button>
+      </div>
+      <div class="label" style="margin-top:14px" data-i18n="category">বিষয়</div>
+      <div class="chips" id="catChips">
+        <button class="chip active" data-cat="algebra" data-i18n="algebra">বীজগণিত</button>
+        <button class="chip" data-cat="quadratic" data-i18n="quadratic">দ্বিঘাত</button>
+        <button class="chip" data-cat="percentage" data-i18n="percentage">শতকরা</button>
+        <button class="chip" data-cat="geometry" data-i18n="geometry">জ্যামিতি</button>
+      </div>
+    </div>
+    <div class="card">
+      <div class="q-box">
+        <div class="q-text" id="qText">—</div>
+        <div class="q-sub" id="qSub"></div>
+      </div>
+      <input id="ansInput" class="math-input" type="text" inputmode="text" placeholder="আপনার উত্তর লিখুন…" style="font-size:18px" />
+      <div class="row">
+        <button class="btn primary" id="checkBtn" data-i18n="check">উত্তর যাচাই</button>
+        <button class="btn ghost" id="nextBtn" data-i18n="next">পরের প্রশ্ন</button>
+      </div>
+      <div class="feedback" id="pFeedback"></div>
+    </div>
+  </section>
+
+  <!-- HISTORY -->
+  <section class="view" id="view-history">
+    <div class="card">
+      <input id="histSearch" class="math-input" style="font-family:var(--font);font-size:14px;min-height:46px" placeholder="ইতিহাস খুঁজুন…" />
+      <div class="row">
+        <button class="btn ghost sm" data-filter="all" data-i18n="all">সব</button>
+        <button class="btn ghost sm" data-filter="equation" data-i18n="equations">সমীকরণ</button>
+        <button class="btn ghost sm" data-filter="arith" data-i18n="arithmetic">পাটিগণিত</button>
+      </div>
+    </div>
+    <div id="histList" class="stack"></div>
+    <div class="row" style="margin-top:14px">
+      <button class="btn ghost" id="exportTxt" data-i18n="exportTxt">TXT এক্সপোর্ট</button>
+      <button class="btn ghost" id="exportJson" data-i18n="exportJson">JSON এক্সপোর্ট</button>
+    </div>
+    <div class="row">
+      <button class="btn ghost" id="clearHist" style="color:var(--err);border-color:color-mix(in srgb,var(--err) 40%, transparent)" data-i18n="clearHistory">সব ইতিহাস মুছুন</button>
+    </div>
+  </section>
+
+</main>
+
+<!-- BOTTOM NAV -->
+<nav class="bottom">
+  <button class="nav-item active" data-view="home"><span class="ni">🏠</span><span data-i18n="home">হোম</span></button>
+  <button class="nav-item" data-view="solve"><span class="ni">🧮</span><span data-i18n="solveNav">সমাধান</span></button>
+  <button class="nav-item" data-view="scan"><span class="ni">📷</span><span data-i18n="scanNav">স্ক্যান</span></button>
+  <button class="nav-item" data-view="practice"><span class="ni">🎯</span><span data-i18n="practiceNav">অনুশীলন</span></button>
+  <button class="nav-item" data-view="history"><span class="ni">🕘</span><span data-i18n="historyNav">ইতিহাস</span></button>
+</nav>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+  <div class="modal-sheet">
+    <div class="modal-grab"></div>
+    <h3 class="modal-title" id="modalTitle">—</h3>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+/* ============================================================
+   MOMIN MATH AI PRO — ULTIMATE ENGINE · SUMAIYA SPECIAL ENHANCED
+   Single file. No eval. No backend. Local-first.
+   ============================================================ */
+(function () {
+'use strict';
+
+/* ---------- Utilities ---------- */
+const $  = (s, r) => (r || document).querySelector(s);
+const $$ = (s, r) => Array.from((r || document).querySelectorAll(s));
+const esc = s => String(s == null ? '' : s)
+  .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+  .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+const uid = () => Date.now().toString(36) + Math.random().toString(36).slice(2, 8);
+const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
+
+/* ---------- State ---------- */
+const STORE_KEY = 'momin_math_v4';
+const State = {
+  lang: 'bn',
+  version: 'classic',   // classic | premium | cyber | sumaiya
+  theme: 'dark',        // dark | light
+  sound: true,
+  animation: true,
+  precision: 4,
+  history: [],
+  practice: { score: 0, total: 0, streak: 0, best: 0 },
+  view: 'home'
+};
+
+function saveState() {
+  try {
+    localStorage.setItem(STORE_KEY, JSON.stringify({
+      lang: State.lang, version: State.version, theme: State.theme,
+      sound: State.sound, animation: State.animation, precision: State.precision,
+      history: State.history.slice(0, 300), practice: State.practice
+    }));
+  } catch (e) { console.warn('[MOMIN] save failed:', e && e.message); }
+}
+function loadState() {
+  try {
+    const raw = localStorage.getItem(STORE_KEY);
+    if (!raw) return;
+    const d = JSON.parse(raw);
+    if (!d || typeof d !== 'object') return;
+    if (d.lang === 'bn' || d.lang === 'en') State.lang = d.lang;
+    if (['classic','premium','cyber','sumaiya'].includes(d.version)) State.version = d.version;
+    if (d.theme === 'light' || d.theme === 'dark') State.theme = d.theme;
+    if (typeof d.sound === 'boolean') State.sound = d.sound;
+    if (typeof d.animation === 'boolean') State.animation = d.animation;
+    if (typeof d.precision === 'number') State.precision = clamp(d.precision, 0, 8);
+    if (Array.isArray(d.history)) State.history = d.history.filter(h => h && typeof h.q === 'string').slice(0, 300);
+    if (d.practice && typeof d.practice === 'object') {
+      State.practice.score = Number(d.practice.score) || 0;
+      State.practice.total = Number(d.practice.total) || 0;
+      State.practice.streak = Number(d.practice.streak) || 0;
+      State.practice.best = Number(d.practice.best) || 0;
+    }
+  } catch (e) { console.warn('[MOMIN] load failed:', e && e.message); }
+}
+
+/* ---------- i18n ---------- */
+const L = (bn, en) => State.lang === 'bn' ? bn : en;
+const I18N = {
+  bn: {
+    smartInput:'স্মার্ট ইনপুট', solve:'সমাধান করুন', clear:'মুছুন',
+    scanMath:'স্ক্যান ম্যাথ', cameraOrImage:'ক্যামেরা / ছবি',
+    manualSolve:'ম্যানুয়াল', typeAndSolve:'লিখে সমাধান',
+    quickCategories:'দ্রুত ক্যাটাগরি', recentHistory:'সাম্প্রতিক', viewAll:'সব দেখুন',
+    dailyPractice:'দৈনিক অনুশীলন', startPractice:'শুরু করুন',
+    typeProblem:'গণিত সমস্যা লিখুন', examples:'উদাহরণ',
+    cameraScan:'ক্যামেরা স্ক্যান', camHint:'ক্যামেরা চালু করুন অথবা নিচ থেকে ছবি আপলোড করুন',
+    startCamera:'ক্যামেরা চালু', capture:'ছবি তুলুন', uploadImage:'ছবি আপলোড',
+    rotate:'ঘোরান', enhance:'উন্নত করুন', extractText:'টেক্সট বের করুন (OCR)',
+    handwrittenNote:'⚠️ OCR মূলত প্রিন্টেড গণিতের জন্য। হাতের লেখায় ফলাফল ভুল হতে পারে — নিচে টেক্সট এডিট করুন।',
+    extractedText:'OCR টেক্সট (এডিটযোগ্য)', solveThis:'এটি সমাধান করুন',
+    score:'স্কোর', attempted:'চেষ্টা', streak:'স্ট্রিক',
+    difficulty:'কঠিনতা', easy:'সহজ', medium:'মাঝারি', hard:'কঠিন',
+    category:'বিষয়', algebra:'বীজগণিত', quadratic:'দ্বিঘাত', percentage:'শতকরা', geometry:'জ্যামিতি',
+    check:'উত্তর যাচাই', next:'পরের প্রশ্ন',
+    all:'সব', equations:'সমীকরণ', arithmetic:'পাটিগণিত',
+    exportTxt:'TXT এক্সপোর্ট', exportJson:'JSON এক্সপোর্ট',
+    clearHistory:'সব ইতিহাস মুছুন',
+    home:'হোম', solveNav:'সমাধান', scanNav:'স্ক্যান', practiceNav:'অনুশীলন', historyNav:'ইতিহাস',
+    welcome:'স্বাগতম 👋', welcomeSub:'গণিত সমাধান করুন — সহজ, দ্রুত ও ধাপে ধাপে।',
+    sumaiyaWelcome:'স্বাগতম সুমাইয়া 🌸', sumaiyaSub:'তোমার জন্য ভালোবাসা দিয়ে সাজানো একটি বিশেষ অ্যাপ 💕',
+    noHistory:'এখনো কোনো হিসাব সংরক্ষিত হয়নি।', noHistoryIcon:'📭',
+    answerLabel:'উত্তর', stepsLabel:'ধাপে ধাপে সমাধান',
+    copy:'কপি করুন', copied:'কপি হয়েছে ✓', saved:'সংরক্ষিত ✓', copyFail:'কপি করা যায়নি',
+    verifyLabel:'যাচাই', explainLabel:'সহজ ব্যাখ্যা',
+    correct:'সঠিক উত্তর! 🎉', incorrect:'ভুল উত্তর', enterAnswer:'অনুগ্রহ করে উত্তর লিখুন।',
+    camDenied:'ক্যামেরা অনুমতি পাওয়া যায়নি। ছবি আপলোড করুন।',
+    camUnsupported:'এই ব্রাউজারে ক্যামেরা সমর্থিত নয়।',
+    ocrLoading:'OCR চলছে… প্রথমবার লোড হতে সময় লাগতে পারে।',
+    ocrFailed:'OCR ব্যর্থ। ইন্টারনেট বা ছবির মান পরীক্ষা করুন।',
+    ocrOffline:'OCR-এ ইন্টারনেট প্রয়োজন (CDN লাইব্রেরি)। মূল গণিত ইঞ্জিন অফললাইনেও কাজ করে।',
+    online:'অনলাইন', offline:'অফলাইন', cleared:'মুছে ফেলা হয়েছে',
+    loadQuestion:'প্রশ্ন লোড হচ্ছে…',
+    settings:'সেটিংস', language:'ভাষা', languageDesc:'ইন্টারফেসের ভাষা পরিবর্তন করুন',
+    theme:'ডার্ক / লাইট মোড', themeDesc:'চোখের আরামদায়ক থিম',
+    sound:'সাউন্ড', soundDesc:'ফিডব্যাক শব্দ',
+    animation:'অ্যানিমেশন', animationDesc:'ভিজ্যুয়াল ইফেক্ট',
+    precision:'দশমিক নির্ভুলতা', precisionDesc:'ফলাফলে দশমিক স্থান',
+    clearHistoryDesc:'সব সংরক্ষিত হিসাব মুছে ফেলুন',
+    clearCache:'ক্যাশ পরিষ্কার', clearCacheDesc:'সাময়িক ডেটা মুছুন',
+    about:'অ্যাপ সম্পর্কে', version:'সংস্করণ', engine:'ম্যাথ ইঞ্জিন',
+    privacy:'গোপনীয়তা', privacyText:'সব ডেটা আপনার ডিভাইসেই সংরক্ষিত। কোনো সার্ভারে পাঠানো হয় না।',
+    versionLabel:'সংস্করণ নির্বাচন', versionDesc:'৪টি প্রিমিয়াম ডিজাইন',
+    vClassic:'নরমাল এডিশন', vPremium:'প্রিমিয়াম এডিশন', vCyber:'ম্যাক্স লেভেল প্রো', vSumaiya:'সুমাইয়া স্পেশাল',
+    devCard:'ডেভেলপার', dedication:'বিশেষ উৎসর্গ',
+    close:'বন্ধ করুন', back:'ফিরে যান',
+    sumaiyaGreet:'সুমাইয়া স্পেশাল এডিশন চালু হলো! 💕'
+  },
+  en: {
+    smartInput:'Smart Input', solve:'Solve', clear:'Clear',
+    scanMath:'Scan Math', cameraOrImage:'Camera / Image',
+    manualSolve:'Manual', typeAndSolve:'Type & Solve',
+    quickCategories:'Quick Categories', recentHistory:'Recent', viewAll:'View All',
+    dailyPractice:'Daily Practice', startPractice:'Start',
+    typeProblem:'Type your math problem', examples:'Examples',
+    cameraScan:'Camera Scan', camHint:'Start camera or upload an image below',
+    startCamera:'Start Camera', capture:'Capture', uploadImage:'Upload Image',
+    rotate:'Rotate', enhance:'Enhance', extractText:'Extract Text (OCR)',
+    handwrittenNote:'⚠️ OCR works best on printed math. Handwriting may produce errors — edit below.',
+    extractedText:'OCR Text (editable)', solveThis:'Solve This',
+    score:'Score', attempted:'Attempted', streak:'Streak',
+    difficulty:'Difficulty', easy:'Easy', medium:'Medium', hard:'Hard',
+    category:'Category', algebra:'Algebra', quadratic:'Quadratic', percentage:'Percentage', geometry:'Geometry',
+    check:'Check Answer', next:'Next Question',
+    all:'All', equations:'Equations', arithmetic:'Arithmetic',
+    exportTxt:'Export TXT', exportJson:'Export JSON',
+    clearHistory:'Clear All History',
+    home:'Home', solveNav:'Solve', scanNav:'Scan', practiceNav:'Practice', historyNav:'History',
+    welcome:'Welcome 👋', welcomeSub:'Solve math — simple, fast and step by step.',
+    sumaiyaWelcome:'Welcome Sumaiya 🌸', sumaiyaSub:'A special app made with love, just for you 💕',
+    noHistory:'No calculations saved yet.', noHistoryIcon:'📭',
+    answerLabel:'Answer', stepsLabel:'Step-by-step Solution',
+    copy:'Copy', copied:'Copied ✓', saved:'Saved ✓', copyFail:'Copy failed',
+    verifyLabel:'Verification', explainLabel:'Simple Explanation',
+    correct:'Correct! 🎉', incorrect:'Incorrect', enterAnswer:'Please enter an answer.',
+    camDenied:'Camera permission denied. Try uploading an image.',
+    camUnsupported:'Camera is not supported in this browser.',
+    ocrLoading:'Running OCR… First load may take a while.',
+    ocrFailed:'OCR failed. Check internet or image quality.',
+    ocrOffline:'OCR needs internet (CDN library). The core math engine works offline.',
+    online:'Online', offline:'Offline', cleared:'Cleared',
+    loadQuestion:'Loading question…',
+    settings:'Settings', language:'Language', languageDesc:'Change interface language',
+    theme:'Dark / Light Mode', themeDesc:'Comfortable viewing theme',
+    sound:'Sound', soundDesc:'Feedback sounds',
+    animation:'Animations', animationDesc:'Visual effects',
+    precision:'Decimal Precision', precisionDesc:'Decimal places in results',
+    clearHistoryDesc:'Delete all saved calculations',
+    clearCache:'Clear Cache', clearCacheDesc:'Remove temporary app data',
+    about:'About', version:'Version', engine:'Math Engine',
+    privacy:'Privacy', privacyText:'All data stays on your device. Nothing is sent to any server.',
+    versionLabel:'Select Edition', versionDesc:'4 premium designs',
+    vClassic:'Normal Edition', vPremium:'Premium Edition', vCyber:'Max Level Pro', vSumaiya:'Sumaiya Special',
+    devCard:'Developer', dedication:'Special Dedication',
+    close:'Close', back:'Back',
+    sumaiyaGreet:'Sumaiya Special Edition activated! 💕'
+  }
+};
+const t = k => (I18N[State.lang] && I18N[State.lang][k]) || I18N.en[k] || k;
+
+/* ---------- Math Engine: errors ---------- */
+class MathError extends Error {
+  constructor(code, detail) { super(code); this.name = 'MathError'; this.code = code; this.detail = detail; }
+}
+const ERRMSG = {
+  EMPTY:{bn:'কোনো গণিত সমস্যা দেওয়া হয়নি।',en:'No math problem was provided.',ex:'2x + 5 = 15'},
+  INVALID_CHAR:{bn:'অবৈধ অক্ষর পাওয়া গেছে',en:'Invalid character found',ex:'2x + 5 = 15'},
+  INVALID_NUMBER:{bn:'সংখ্যাটি সঠিক নয় (একাধিক দশমিক বিন্দু)।',en:'Invalid number (multiple decimal points).',ex:'3.14 + 2.5'},
+  UNMATCHED_OPEN:{bn:'বন্ধনী খোলা হয়েছে কিন্তু বন্ধ করা হয়নি।',en:'Unclosed bracket.',ex:'(2 + 3) × 4'},
+  UNMATCHED_CLOSE:{bn:'অতিরিক্ত বন্ধনী পাওয়া গেছে।',en:'Extra closing bracket.',ex:'(2 + 3) × 4'},
+  MISSING_OPERAND:{bn:'একটি সংখ্যা বা এক্সপ্রেশন অনুপস্থিত।',en:'A number or expression is missing.',ex:'2x + 5 = 15'},
+  DIV_ZERO:{bn:'শূন্য দিয়ে ভাগ করা সম্ভব নয়।',en:'Division by zero is not allowed.',ex:'10 / 2'},
+  SQRT_NEG:{bn:'ঋণাত্মক সংখ্যার বর্গমূল বাস্তব নয়।',en:'Square root of a negative is not real.',ex:'√16'},
+  LOG_DOMAIN:{bn:'লগারিদমের ইনপুট ধনাত্মক হতে হবে।',en:'Logarithm input must be positive.',ex:'log(100)'},
+  BAD_FACTORIAL:{bn:'ফ্যাক্টোরিয়াল শুধু অ-ঋণাত্মক পূর্ণসংখ্যার জন্য।',en:'Factorial applies only to non-negative integers.',ex:'5!'},
+  OVERFLOW:{bn:'ফলাফল অত্যন্ত বড়।',en:'The result is too large.',ex:'2^10'},
+  UNKNOWN_VAR:{bn:'অজানা চলক।',en:'Unknown variable.',ex:'2x + 5 = 15'},
+  UNKNOWN_FUNC:{bn:'ফাংশনটি সমর্থিত নয়।',en:'This function is not supported.',ex:'√(16) + sin(0)'},
+  FUNC_ERROR:{bn:'ফাংশনের ইনপুট সঠিক নয়।',en:'Invalid input for this function.',ex:'√(16)'},
+  NEED_EQUATION:{bn:'চলক রয়েছে — অনুগ্রহ করে সমীকরণ দিন।',en:'Variables present — please provide an equation.',ex:'2x + 5 = 15'},
+  MULTI_EQUALS:{bn:'একটি সমীকরণে একাধিক "=" থাকতে পারে না।',en:'An equation cannot contain multiple "=" signs.',ex:'2x + 5 = 15'},
+  TOO_COMPLEX:{bn:'এক্সপ্রেশনটি অত্যন্ত জটিল।',en:'The expression is too complex.',ex:'2x + 5 = 15'},
+  UNSUPPORTED_DEGREE:{bn:'৩ এর বেশি ঘাত সমর্থিত নয়।',en:'Degree > 3 is not supported.',ex:'x² - 5x + 6 = 0'},
+  UNSUPPORTED_FORM:{bn:'এই ধরনের সমীকরণ সমর্থিত নয়।',en:'This form of equation is not supported.',ex:'x² - 5x + 6 = 0'},
+  SYSTEM_VARS:{bn:'সমীকরণ জোড়ায় ঠিক দুটি চলক থাকতে হবে।',en:'Equation pair must have exactly two variables.',ex:'x + y = 5 ; x - y = 1'},
+  SYSTEM_NONLINEAR:{bn:'শুধু রৈখিক সমীকরণ জোড়া সমর্থিত।',en:'Only linear equation pairs are supported.',ex:'x + y = 5 ; x - y = 1'},
+  NO_SOLUTION:{bn:'এই সমীকরণের কোনো সমাধান নেই।',en:'This equation has no solution.',ex:'x + 1 = x + 2'},
+  INFINITE_SOL:{bn:'অসংখ্য সমাধান আছে (সর্বসমতা)।',en:'Infinitely many solutions (identity).',ex:'x + 1 = x + 1'},
+  PARSE:{bn:'এক্সপ্রেশনটি পার্স করা যায়নি।',en:'The expression could not be parsed.',ex:'2 + 3 × 4'}
+};
+function formatError(err) {
+  const code = (err && err.code) || 'PARSE';
+  const m = ERRMSG[code] || ERRMSG.PARSE;
+  let title = L(m.bn, m.en);
+  if (err && err.detail) title += ' → "' + String(err.detail) + '"';
+  const hint = (code === 'INVALID_CHAR' || code === 'UNKNOWN_VAR')
+    ? L('শুধু সংখ্যা, চলক (x, y), ও + − × ÷ ^ ( ) ব্যবহার করুন।', 'Use only numbers, variables (x, y), + − × ÷ ^ ( ).')
+    : '';
+  return { title, hint, example: m.ex };
+}
+
+/* ---------- Normalization ---------- */
+const BN_DIGITS = '০১২৩৪৫৬৭৮৯';
+function normalizeInput(raw) {
+  let s = String(raw == null ? '' : raw);
+  s = s.replace(/[০-৯]/g, d => String(BN_DIGITS.indexOf(d)));
+  s = s.replace(/[٠-٩]/g, d => String('٠١٢٣٤٥٦٧٨٩'.indexOf(d)));
+  s = s.replace(/[०-९]/g, d => String('०१२३४५६७८९'.indexOf(d)));
+  s = s.replace(/[×✕✖⨯·⋅∙]/g, '*')
+       .replace(/[÷∕⁄]/g, '/')
+       .replace(/[−–—‒]/g, '-')
+       .replace(/[＋﹢]/g, '+')
+       .replace(/[＝﹦]/g, '=')
+       .replace(/[（]/g, '(')
+       .replace(/[）]/g, ')')
+       .replace(/[，、]/g, ',')
+       .replace(/[。]/g, '.');
+  const sup = {'⁰':'0','¹':'1','²':'2','³':'3','⁴':'4','⁵':'5','⁶':'6','⁷':'7','⁸':'8','⁹':'9'};
+  s = s.replace(/[⁰¹²³⁴⁵⁶⁷⁸⁹]+/g, m => '^' + m.split('').map(c => sup[c]).join(''));
+  s = s.replace(/π/g, 'pi').replace(/τ/g, 'tau');
+  s = s.replace(/√\s*\(/g, 'sqrt(');
+  s = s.replace(/√\s*([0-9a-zA-Z_.]+)/g, 'sqrt($1)');
+  s = s.replace(/√/g, 'sqrt');
+  s = s.replace(/\b(of|এর)\b/gi, '*');
+  s = s.replace(/\b(times|গুণ)\b/gi, '*');
+  s = s.replace(/\b(divided\s*by|ভাগ)\b/gi, '/');
+  s = s.replace(/\b(plus|যোগ)\b/gi, '+');
+  s = s.replace(/\b(minus|বিয়োগ)\b/gi, '-');
+  s = s.replace(/(\d),(\d{3})(?!\d)/g, '$1$2');
+  s = s.replace(/\r/g, '\n').replace(/[ \t]+/g, ' ').replace(/\n{3,}/g, '\n\n').trim();
+  return s;
+}
+
+/* ---------- Tokenizer ---------- */
+function tokenize(src) {
+  const toks = []; let i = 0;
+  while (i < src.length) {
+    const c = src[i];
+    if (c === ' ' || c === '\t' || c === '\n') { i++; continue; }
+    if ((c >= '0' && c <= '9') || c === '.') {
+      let j = i, dots = 0;
+      while (j < src.length && ((src[j] >= '0' && src[j] <= '9') || src[j] === '.')) {
+        if (src[j] === '.') dots++; j++;
+      }
+      if (dots > 1) throw new MathError('INVALID_NUMBER', src.slice(i, j));
+      const numStr = src.slice(i, j);
+      if (numStr === '.') throw new MathError('INVALID_NUMBER', '.');
+      toks.push({ t: 'num', v: parseFloat(numStr) });
+      i = j; continue;
+    }
+    if (/[a-zA-Z_]/.test(c)) {
+      let j = i;
+      while (j < src.length && /[a-zA-Z_0-9]/.test(src[j])) j++;
+      toks.push({ t: 'id', v: src.slice(i, j) });
+      i = j; continue;
+    }
+    if ('+-*/^%!(),'.indexOf(c) >= 0) { toks.push({ t: 'op', v: c }); i++; continue; }
+    throw new MathError('INVALID_CHAR', c);
+  }
+  return toks;
+}
+
+/* ---------- Constants & Functions ---------- */
+const CONSTS = { pi: Math.PI, e: Math.E, phi: (1 + Math.sqrt(5)) / 2, tau: Math.PI * 2 };
+function factorial(n) {
+  if (!Number.isFinite(n) || !Number.isInteger(n) || n < 0) throw new MathError('BAD_FACTORIAL', String(n));
+  if (n > 170) throw new MathError('OVERFLOW');
+  let r = 1; for (let i = 2; i <= n; i++) r *= i; return r;
+}
+function gcd2(a, b) {
+  a = Math.abs(Math.round(a)); b = Math.abs(Math.round(b));
+  while (b) { const t = b; b = a % b; a = t; } return a;
+}
+function lcm2(a, b) {
+  a = Math.abs(Math.round(a)); b = Math.abs(Math.round(b));
+  if (a === 0 || b === 0) return 0;
+  return (a / gcd2(a, b)) * b;
+}
+const FUNCS = {
+  sqrt: x => { if (x < 0) throw new MathError('SQRT_NEG', String(x)); return Math.sqrt(x); },
+  cbrt: x => Math.cbrt(x),
+  abs: x => Math.abs(x),
+  sin: x => Math.sin(x), cos: x => Math.cos(x), tan: x => Math.tan(x),
+  asin: x => Math.asin(x), acos: x => Math.acos(x), atan: x => Math.atan(x),
+  sinh: x => Math.sinh(x), cosh: x => Math.cosh(x), tanh: x => Math.tanh(x),
+  sind: x => Math.sin(x * Math.PI / 180),
+  cosd: x => Math.cos(x * Math.PI / 180),
+  tand: x => Math.tan(x * Math.PI / 180),
+  log: x => { if (x <= 0) throw new MathError('LOG_DOMAIN', String(x)); return Math.log10(x); },
+  log2: x => { if (x <= 0) throw new MathError('LOG_DOMAIN', String(x)); return Math.log2(x); },
+  ln: x => { if (x <= 0) throw new MathError('LOG_DOMAIN', String(x)); return Math.log(x); },
+  exp: x => Math.exp(x),
+  fact: factorial, factorial: factorial,
+  gcd: (a, b) => gcd2(a, b), hcf: (a, b) => gcd2(a, b),
+  lcm: (a, b) => lcm2(a, b),
+  min: (...a) => Math.min(...a), max: (...a) => Math.max(...a),
+  round: x => Math.round(x), floor: x => Math.floor(x), ceil: x => Math.ceil(x),
+  sign: x => Math.sign(x),
+  ncr: (n, r) => factorial(n) / (factorial(r) * factorial(n - r)),
+  npr: (n, r) => factorial(n) / factorial(n - r),
+  deg: x => x * 180 / Math.PI, rad: x => x * Math.PI / 180,
+  pow: (a, b) => Math.pow(a, b),
+  mod: (a, b) => { if (b === 0) throw new MathError('DIV_ZERO'); return a % b; }
+};
+
+/* ---------- Parser (recursive descent) ---------- */
+class Parser {
+  constructor(toks) { this.toks = toks; this.p = 0; }
+  peek(k) { return this.toks[this.p + (k || 0)]; }
+  eat(v) { const tk = this.peek(); if (tk && tk.t === 'op' && tk.v === v) { this.p++; return true; } return false; }
+  parse() {
+    if (!this.toks.length) throw new MathError('EMPTY');
+    const node = this.parseExpr();
+    if (this.p < this.toks.length) throw new MathError('UNEXPECTED_TOKEN', this.toks[this.p].v);
+    return node;
+  }
+  parseExpr() {
+    let left = this.parseTerm();
+    for (;;) {
+      const tk = this.peek();
+      if (tk && tk.t === 'op' && (tk.v === '+' || tk.v === '-')) {
+        this.p++; left = { type: 'bin', op: tk.v, left, right: this.parseTerm() };
+      } else break;
+    }
+    return left;
+  }
+  startsPrimary(tk) {
+    if (!tk) return false;
+    if (tk.t === 'num' || tk.t === 'id') return true;
+    if (tk.t === 'op' && tk.v === '(') return true;
+    return false;
+  }
+  parseTerm() {
+    let left = this.parseUnary();
+    for (;;) {
+      const tk = this.peek();
+      if (tk && tk.t === 'op' && (tk.v === '*' || tk.v === '/')) {
+        this.p++; left = { type: 'bin', op: tk.v, left, right: this.parseUnary() };
+      } else if (this.startsPrimary(tk)) {
+        left = { type: 'bin', op: '*', left, right: this.parseUnary() };
+      } else break;
+    }
+    return left;
+  }
+  parseUnary() {
+    const tk = this.peek();
+    if (tk && tk.t === 'op' && (tk.v === '+' || tk.v === '-')) {
+      this.p++; return { type: 'unary', op: tk.v, arg: this.parseUnary() };
+    }
+    return this.parsePower();
+  }
+  parsePower() {
+    const base = this.parsePostfix();
+    const tk = this.peek();
+    if (tk && tk.t === 'op' && tk.v === '^') {
+      this.p++; return { type: 'bin', op: '^', left: base, right: this.parseUnary() };
+    }
+    return base;
+  }
+  parsePostfix() {
+    let node = this.parsePrimary();
+    for (;;) {
+      const tk = this.peek();
+      if (tk && tk.t === 'op' && (tk.v === '!' || tk.v === '%')) {
+        this.p++; node = { type: 'post', op: tk.v, arg: node };
+      } else break;
+    }
+    return node;
+  }
+  parsePrimary() {
+    const tk = this.peek();
+    if (!tk) throw new MathError('MISSING_OPERAND');
+    if (tk.t === 'num') { this.p++; return { type: 'num', v: tk.v }; }
+    if (tk.t === 'id') {
+      this.p++; const name = tk.v; const nt = this.peek();
+      if (nt && nt.t === 'op' && nt.v === '(') {
+        this.p++;
+        const args = [];
+        if (!(this.peek() && this.peek().t === 'op' && this.peek().v === ')')) {
+          args.push(this.parseExpr());
+          while (this.eat(',')) args.push(this.parseExpr());
+        }
+        if (!this.eat(')')) throw new MathError('UNMATCHED_OPEN', name + '(');
+        const lower = name.toLowerCase();
+        if (!FUNCS[lower]) throw new MathError('UNKNOWN_FUNC', name);
+        return { type: 'call', name: lower, args };
+      }
+      return { type: 'var', name: name };
+    }
+    if (tk.t === 'op' && tk.v === '(') {
+      this.p++; const inner = this.parseExpr();
+      if (!this.eat(')')) throw new MathError('UNMATCHED_OPEN', '(');
+      return inner;
+    }
+    if (tk.t === 'op' && tk.v === ')') throw new MathError('MISSING_OPERAND', ')');
+    throw new MathError('UNEXPECTED_TOKEN', tk.v);
+  }
+}
+
+/* ---------- Evaluator ---------- */
+function evalNode(n, scope) {
+  switch (n.type) {
+    case 'num': return n.v;
+    case 'var': {
+      if (scope && Object.prototype.hasOwnProperty.call(scope, n.name)) return scope[n.name];
+      const key = n.name.toLowerCase();
+      if (Object.prototype.hasOwnProperty.call(CONSTS, key)) return CONSTS[key];
+      throw new MathError('UNKNOWN_VAR', n.name);
+    }
+    case 'unary': return n.op === '-' ? -evalNode(n.arg, scope) : evalNode(n.arg, scope);
+    case 'bin': {
+      const a = evalNode(n.left, scope), b = evalNode(n.right, scope);
+      switch (n.op) {
+        case '+': return a + b;
+        case '-': return a - b;
+        case '*': return a * b;
+        case '/': if (b === 0) throw new MathError('DIV_ZERO'); return a / b;
+        case '^': {
+          const r = Math.pow(a, b);
+          if (!isFinite(r)) throw new MathError('OVERFLOW');
+          if (isNaN(r)) throw new MathError('FUNC_ERROR', '^');
+          return r;
+        }
+        default: throw new MathError('UNEXPECTED_TOKEN', n.op);
+      }
+    }
+    case 'call': {
+      const f = FUNCS[n.name]; if (!f) throw new MathError('UNKNOWN_FUNC', n.name);
+      const r = f.apply(null, n.args.map(a => evalNode(a, scope)));
+      if (typeof r !== 'number' || isNaN(r)) throw new MathError('FUNC_ERROR', n.name);
+      if (!isFinite(r)) throw new MathError('OVERFLOW');
+      return r;
+    }
+    case 'post': {
+      const v = evalNode(n.arg, scope);
+      if (n.op === '!') return factorial(v);
+      if (n.op === '%') return v / 100;
+      throw new MathError('UNEXPECTED_TOKEN', n.op);
+    }
+    default: throw new MathError('PARSE');
+  }
+}
+function collectVars(n, set) {
+  set = set || new Set();
+  if (!n) return set;
+  if (n.type === 'var') { if (!Object.prototype.hasOwnProperty.call(CONSTS, n.name.toLowerCase())) set.add(n.name); }
+  else if (n.type === 'bin') { collectVars(n.left, set); collectVars(n.right, set); }
+  else if (n.type === 'unary') collectVars(n.arg, set);
+  else if (n.type === 'post') collectVars(n.arg, set);
+  else if (n.type === 'call') n.args.forEach(a => collectVars(a, set));
+  return set;
+}
+
+/* ---------- Polynomial ops ---------- */
+function polyMul(a, b) {
+  const r = new Array(a.length + b.length - 1).fill(0);
+  for (let i = 0; i < a.length; i++)
+    for (let j = 0; j < b.length; j++) r[i + j] += a[i] * b[j];
+  return r;
+}
+function polyTrim(p) {
+  const q = p.slice();
+  while (q.length > 1 && Math.abs(q[q.length - 1]) < 1e-12) q.pop();
+  return q;
+}
+function toPoly(n, v) {
+  const vars = collectVars(n, new Set());
+  if (!vars.has(v)) return [evalNode(n, {})];
+  switch (n.type) {
+    case 'var': return n.name === v ? [0, 1] : null;
+    case 'unary': { const p = toPoly(n.arg, v); if (!p) return null; return n.op === '-' ? p.map(c => -c) : p; }
+    case 'bin': {
+      if (n.op === '+' || n.op === '-') {
+        const a = toPoly(n.left, v), b = toPoly(n.right, v);
+        if (!a || !b) return null;
+        const len = Math.max(a.length, b.length);
+        const out = new Array(len).fill(0);
+        for (let i = 0; i < len; i++) {
+          const av = a[i] || 0, bv = b[i] || 0;
+          out[i] = n.op === '+' ? av + bv : av - bv;
+        }
+        return out;
+      }
+      if (n.op === '*') { const a = toPoly(n.left, v), b = toPoly(n.right, v); if (!a || !b) return null; return polyMul(a, b); }
+      if (n.op === '/') {
+        const a = toPoly(n.left, v), b = toPoly(n.right, v);
+        if (!a || !b) return null;
+        if (b.length === 1) { if (Math.abs(b[0]) < 1e-15) throw new MathError('DIV_ZERO'); return a.map(c => c / b[0]); }
+        return null;
+      }
+      if (n.op === '^') {
+        const base = toPoly(n.left, v), ex = toPoly(n.right, v);
+        if (!base || !ex || ex.length !== 1) return null;
+        const k = ex[0];
+        if (!Number.isInteger(k) || k < 0 || k > 12) return null;
+        let r = [1]; for (let i = 0; i < k; i++) r = polyMul(r, base);
+        return r;
+      }
+      return null;
+    }
+    default: return null;
+  }
+}
+
+/* ---------- Helpers ---------- */
+function fmtNum(x) {
+  if (x == null || isNaN(x)) return '—';
+  if (!isFinite(x)) return x > 0 ? '∞' : '−∞';
+  if (Number.isInteger(x) && Math.abs(x) < 1e15) return String(x);
+  const p = clamp(State.precision, 0, 10);
+  let s = x.toFixed(p);
+  if (s.indexOf('.') >= 0) s = s.replace(/0+$/, '').replace(/\.$/, '');
+  if (s === '-0') s = '0';
+  return s;
+}
+function fmtNumClean(x) {
+  if (Math.abs(x) < 1e-12) return '0';
+  if (Math.abs(x - Math.round(x)) < 1e-10) return String(Math.round(x));
+  let s = x.toFixed(clamp(State.precision, 0, 10));
+  s = s.replace(/0+$/, '').replace(/\.$/, '');
+  return s;
+}
+function findTopLevelEquals(s) {
+  let depth = 0;
+  for (let i = 0; i < s.length; i++) {
+    if (s[i] === '(') depth++;
+    else if (s[i] === ')') depth--;
+    else if (s[i] === '=' && depth === 0) return i;
+  }
+  return -1;
+}
+function checkBrackets(s) {
+  let depth = 0;
+  for (let i = 0; i < s.length; i++) {
+    if (s[i] === '(') depth++;
+    else if (s[i] === ')') { depth--; if (depth < 0) throw new MathError('UNMATCHED_CLOSE'); }
+  }
+  if (depth > 0) throw new MathError('UNMATCHED_OPEN');
+}
+function parseExprString(s) {
+  if (!s || !s.trim()) throw new MathError('MISSING_OPERAND');
+  if (s.length > 900) throw new MathError('TOO_COMPLEX');
+  checkBrackets(s);
+  return new Parser(tokenize(s)).parse();
+}
+
+/* ---------- Solvers ---------- */
+function quadraticFormula(a, b, c) {
+  const D = b * b - 4 * a * c;
+  const out = { a, b, c, D, real: [], complex: null, repeated: false };
+  if (Math.abs(D) < 1e-12) { out.real = [-b / (2 * a)]; out.repeated = true; }
+  else if (D > 0) { const sq = Math.sqrt(D); out.real = [(-b - sq) / (2 * a), (-b + sq) / (2 * a)]; }
+  else { const sq = Math.sqrt(-D); const re = -b / (2 * a); out.complex = { re, im: Math.abs(sq / (2 * a)) }; }
+  return out;
+}
+function buildStepsLinear(a, b, v) {
+  const root = -b / a;
+  return { root, steps: [
+    { label: L('ধরন','Type'), value: L('এক চলকবিশিষ্ট রৈখিক সমীকরণ','Linear equation in one variable') },
+    { label: L('প্রদত্ত','Given'), value: `${fmtNumClean(a)}${v} ${b>=0?'+':'−'} ${fmtNumClean(Math.abs(b))} = 0` },
+    { label: L('সূত্র','Formula'), value: `${v} = −b / a = −(${fmtNumClean(b)}) / (${fmtNumClean(a)})` },
+    { label: L('ধাপ ১','Step 1'), value: `${fmtNumClean(a)}${v} = ${fmtNumClean(-b)}` },
+    { label: L('ধাপ ২','Step 2'), value: `${v} = ${fmtNumClean(-b)} / ${fmtNumClean(a)} = ${fmtNumClean(root)}` }
+  ]};
+}
+function buildStepsQuadratic(a, b, c, v, sol) {
+  const steps = [
+    { label: L('ধরন','Type'), value: L('দ্বিঘাত সমীকরণ (Quadratic Equation)','Quadratic equation') },
+    { label: L('সহগ','Coefficients'), value: `a = ${fmtNumClean(a)},  b = ${fmtNumClean(b)},  c = ${fmtNumClean(c)}` },
+    { label: L('সূত্র','Formula'), value: `${v} = [ −b ± √(b² − 4ac) ] / 2a` },
+    { label: L('ধাপ ১ — নিশ্চায়ক','Step 1 — Discriminant'), value: `D = b² − 4ac = (${fmtNumClean(b)})² − 4(${fmtNumClean(a)})(${fmtNumClean(c)}) = ${fmtNumClean(sol.D)}` }
+  ];
+  if (sol.repeated) {
+    steps.push({ label: L('ধাপ ২','Step 2'), value: `D = 0  →  ${L('পুনরাবৃত্ত মূল','repeated root')}` });
+    steps.push({ label: L('ধাপ ৩','Step 3'), value: `${v} = −b / 2a = ${fmtNumClean(sol.real[0])}` });
+  } else if (sol.D > 0) {
+    steps.push({ label: L('ধাপ ২','Step 2'), value: `D > 0  →  ${L('দুটি ভিন্ন বাস্তব মূল','two distinct real roots')}` });
+    steps.push({ label: L('ধাপ ৩','Step 3'), value: `√D = ${fmtNum(Math.sqrt(sol.D))}` });
+    steps.push({ label: L('ধাপ ৪','Step 4'), value:
+      `${v}₁ = (−${fmtNumClean(b)} + ${fmtNum(Math.sqrt(sol.D))}) / ${fmtNumClean(2*a)} = ${fmtNum(sol.real[1])}\n` +
+      `${v}₂ = (−${fmtNumClean(b)} − ${fmtNum(Math.sqrt(sol.D))}) / ${fmtNumClean(2*a)} = ${fmtNum(sol.real[0])}` });
+  } else {
+    steps.push({ label: L('ধাপ ২','Step 2'), value: `D < 0  →  ${L('বাস্তব মূল নেই, জটিল মূল আছে','no real roots — complex roots')}` });
+    steps.push({ label: L('ধাপ ৩','Step 3'), value:
+      `${v} = ${fmtNum(sol.complex.re)} ± ${fmtNum(sol.complex.im)}i` });
+  }
+  return steps;
+}
+
+function solveProblem(raw) {
+  let norm = normalizeInput(raw);
+  if (!norm) throw new MathError('EMPTY');
+  const lines = norm.split(/[;\n]+/).map(s => s.trim()).filter(Boolean);
+  if (lines.length === 2 && lines[0].indexOf('=') >= 0 && lines[1].indexOf('=') >= 0) {
+    return solveSystem(lines[0], lines[1]);
+  }
+  const eqIdx = findTopLevelEquals(norm);
+  if (eqIdx < 0) return solveExpression(norm);
+  return solveSingleEquation(norm);
+}
+function solveExpression(s) {
+  const ast = parseExprString(s);
+  const vars = collectVars(ast, new Set());
+  if (vars.size > 0) throw new MathError('NEED_EQUATION', Array.from(vars).join(', '));
+  const value = evalNode(ast, {});
+  return {
+    ok: true, kind: 'arith',
+    typeLabel: L('পাটিগণিত','Arithmetic'),
+    question: s,
+    steps: [
+      { label: L('ধরন','Type'), value: L('গাণিতিক এক্সপ্রেশন','Arithmetic expression') },
+      { label: L('এক্সপ্রেশন','Expression'), value: s },
+      { label: L('ধাপ ১ — বন্ধনী','Step 1 — Brackets'), value: L('বন্ধনীর ভেতরের কাজ সম্পন্ন।','Inner brackets evaluated.') },
+      { label: L('ধাপ ২ — ঘাত ও মূল','Step 2 — Powers & roots'), value: L('ঘাত (^) ও মূল (√) হিসাব।','Powers and roots computed.') },
+      { label: L('ধাপ ৩ — গুণ ও ভাগ','Step 3 — × and ÷'), value: L('বাম থেকে ডানে গুণ ও ভাগ।','Left to right: × and ÷.') },
+      { label: L('ধাপ ৪ — যোগ ও বিয়োগ','Step 4 — + and −'), value: L('সর্বশেষ যোগ ও বিয়োগ।','Finally + and −.') },
+      { label: L('ফলাফল','Result'), value: `${s} = ${fmtNum(value)}` }
+    ],
+    answer: fmtNum(value), answerRaw: String(value),
+    verify: '', explain: L('BODMAS নিয়ম অনুসারে ধাপে ধাপে হিসাব।','Computed step by step following BODMAS.'),
+    searchKey: 'arith'
+  };
+}
+function solveSingleEquation(s) {
+  const idx = findTopLevelEquals(s);
+  const lhsStr = s.slice(0, idx).trim();
+  const rhsStr = s.slice(idx + 1).trim();
+  if (!lhsStr) throw new MathError('MISSING_OPERAND', '=');
+  if (!rhsStr) throw new MathError('MISSING_OPERAND', '=');
+  if (findTopLevelEquals(rhsStr) >= 0) throw new MathError('MULTI_EQUALS');
+  const lhs = parseExprString(lhsStr);
+  const rhs = parseExprString(rhsStr);
+  const diff = { type: 'bin', op: '-', left: lhs, right: rhs };
+  const vars = Array.from(collectVars(diff, new Set()));
+  if (vars.length === 0) {
+    const val = evalNode(diff, {});
+    if (Math.abs(val) < 1e-9) throw new MathError('INFINITE_SOL');
+    throw new MathError('NO_SOLUTION');
+  }
+  if (vars.length > 1) throw new MathError('UNSUPPORTED_FORM', vars.join(', '));
+  const v = vars[0];
+  const poly = toPoly(diff, v);
+  if (!poly) throw new MathError('UNSUPPORTED_FORM', s);
+  const p = polyTrim(poly);
+  const deg = p.length - 1;
+  if (deg === 0) {
+    if (Math.abs(p[0]) < 1e-9) throw new MathError('INFINITE_SOL');
+    throw new MathError('NO_SOLUTION');
+  }
+  if (deg === 1) {
+    const a = p[1], b = p[0];
+    if (Math.abs(a) < 1e-15) throw new MathError('NO_SOLUTION');
+    const { steps, root } = buildStepsLinear(a, b, v);
+    const verify = `${v} = ${fmtNumClean(root)} ${L('বসালে','substituted')}: ${lhsStr} = ${fmtNum(evalNode(lhs, {[v]:root}))} = ${rhsStr} ✓`;
+    return {
+      ok: true, kind: 'equation',
+      typeLabel: L('রৈখিক সমীকরণ','Linear Equation'),
+      question: s, steps,
+      answer: `${v} = ${fmtNumClean(root)}`,
+      answerRaw: fmtNumClean(root),
+      verify,
+      explain: L(
+        `এটি একটি এক চলকবিশিষ্ট রৈখিক সমীকরণ। চলক ${v}-এর সহগ ${fmtNumClean(a)} এবং ধ্রুবক ${fmtNumClean(b)}। সমতা রক্ষার জন্য ${v} = ${fmtNumClean(root)}।`,
+        `This is a linear equation. The coefficient of ${v} is ${fmtNumClean(a)} and constant is ${fmtNumClean(b)}. To keep equality, ${v} = ${fmtNumClean(root)}.`
+      ),
+      searchKey: 'equation'
+    };
+  }
+  if (deg === 2) {
+    const a = p[2], b = p[1], c = p[0];
+    if (Math.abs(a) < 1e-15) {
+      const { steps, root } = buildStepsLinear(b, c, v);
+      return {
+        ok: true, kind: 'equation', typeLabel: L('রৈখিক সমীকরণ','Linear Equation'),
+        question: s, steps, answer: `${v} = ${fmtNumClean(root)}`,
+        answerRaw: fmtNumClean(root), verify: '', explain: '', searchKey: 'equation'
+      };
+    }
+    const sol = quadraticFormula(a, b, c);
+    const steps = buildStepsQuadratic(a, b, c, v, sol);
+    let answer, answerRaw, verify = '', explain = '';
+    if (sol.repeated) {
+      answer = `${v} = ${fmtNumClean(sol.real[0])}  (${L('পুনরাবৃত্ত মূল','repeated root')})`;
+      answerRaw = fmtNumClean(sol.real[0]);
+      const chk = a * sol.real[0] * sol.real[0] + b * sol.real[0] + c;
+      verify = `${v} = ${fmtNumClean(sol.real[0])} ${L('বসিয়ে','substituted')}: ${fmtNum(chk)} ≈ 0 ✓`;
+      explain = L('নিশ্চায়ক শূন্য তাই দুটি মূল একই। পরাবৃত্তটি x-অক্ষকে এক বিন্দুতে স্পর্শ করে।',
+                  'Discriminant is zero so both roots coincide. The parabola touches the x-axis at one point.');
+    } else if (sol.D > 0) {
+      const r1 = fmtNumClean(sol.real[0]), r2 = fmtNumClean(sol.real[1]);
+      answer = `${v} = ${r1}  ${L('অথবা','or')}  ${v} = ${r2}`;
+      answerRaw = `${r1}, ${r2}`;
+      const c1 = a * sol.real[0] * sol.real[0] + b * sol.real[0] + c;
+      const c2 = a * sol.real[1] * sol.real[1] + b * sol.real[1] + c;
+      verify = `${v} = ${r1}: ${fmtNum(c1)} ≈ 0 ✓\n${v} = ${r2}: ${fmtNum(c2)} ≈ 0 ✓`;
+      explain = L(`D = ${fmtNumClean(sol.D)} ধনাত্মক, তাই দুটি ভিন্ন বাস্তব মূল। যোগফল = ${fmtNumClean(-b/a)}, গুণফল = ${fmtNumClean(c/a)}।`,
+                  `D = ${fmtNumClean(sol.D)} is positive, so two distinct real roots. Sum = ${fmtNumClean(-b/a)}, product = ${fmtNumClean(c/a)}.`);
+    } else {
+      const re = sol.complex.re, im = sol.complex.im;
+      const reStr = fmtNumClean(re), imStr = im === 1 ? '' : fmtNumClean(im);
+      answer = Math.abs(re) < 1e-9 ? `${v} = ±${imStr}i` : `${v} = ${reStr} ± ${imStr}i`;
+      answerRaw = `${reStr} ± ${imStr}i`;
+      verify = L('জটিল মূলের ক্ষেত্রে জটিল সমতলে সমীকরণ সিদ্ধ হয়।','For complex roots the equation holds in the complex plane.');
+      explain = L(`D = ${fmtNumClean(sol.D)} ঋণাত্মক, তাই বাস্তব মূল নেই — দুটি জটিল সংযুগল মূল।`,
+                  `D = ${fmtNumClean(sol.D)} is negative, so no real roots — a conjugate pair of complex roots.`);
+    }
+    return {
+      ok: true, kind: 'equation',
+      typeLabel: L('দ্বিঘাত সমীকরণ','Quadratic Equation'),
+      question: s, steps, answer, answerRaw, verify, explain, searchKey: 'equation'
+    };
+  }
+  throw new MathError('UNSUPPORTED_DEGREE', String(deg));
+}
+function solveSystem(eq1, eq2) {
+  const i1 = findTopLevelEquals(eq1), i2 = findTopLevelEquals(eq2);
+  if (i1 < 0 || i2 < 0) throw new MathError('UNSUPPORTED_FORM');
+  const ast1 = { type:'bin', op:'-', left:parseExprString(eq1.slice(0,i1)), right:parseExprString(eq1.slice(i1+1)) };
+  const ast2 = { type:'bin', op:'-', left:parseExprString(eq2.slice(0,i2)), right:parseExprString(eq2.slice(i2+1)) };
+  const vars = Array.from(new Set([...collectVars(ast1, new Set()), ...collectVars(ast2, new Set())]));
+  if (vars.length !== 2) throw new MathError('SYSTEM_VARS', vars.join(', '));
+  const [x, y] = vars;
+  const f1 = (X, Y) => evalNode(ast1, { [x]: X, [y]: Y });
+  const f2 = (X, Y) => evalNode(ast2, { [x]: X, [y]: Y });
+  const c1 = f1(0,0), c2 = f2(0,0);
+  const a1 = f1(1,0) - c1, b1 = f1(0,1) - c1;
+  const a2 = f2(1,0) - c2, b2 = f2(0,1) - c2;
+  const linCheck =
+    Math.abs(f1(2,0) - (2*a1+c1)) < 1e-9 && Math.abs(f1(0,2) - (2*b1+c1)) < 1e-9 &&
+    Math.abs(f1(1,1) - (a1+b1+c1)) < 1e-9 &&
+    Math.abs(f2(2,0) - (2*a2+c2)) < 1e-9 && Math.abs(f2(0,2) - (2*b2+c2)) < 1e-9 &&
+    Math.abs(f2(1,1) - (a2+b2+c2)) < 1e-9;
+  if (!linCheck) throw new MathError('SYSTEM_NONLINEAR');
+  const D = a1*b2 - a2*b1;
+  if (Math.abs(D) < 1e-12) throw new MathError('NO_SOLUTION');
+  const Dx = (-c1)*b2 - (-c2)*b1;
+  const Dy = a1*(-c2) - a2*(-c1);
+  const X = Dx/D, Y = Dy/D;
+  const steps = [
+    { label: L('ধরন','Type'), value: L('দুই চলকবিশিষ্ট রৈখিক সমীকরণ জোড়া','System of two linear equations') },
+    { label: L('সমীকরণ ১','Equation 1'), value: eq1 },
+    { label: L('সমীকরণ ২','Equation 2'), value: eq2 },
+    { label: L('ধাপ ১','Step 1'), value: `D = (${fmtNumClean(a1)})(${fmtNumClean(b2)}) − (${fmtNumClean(a2)})(${fmtNumClean(b1)}) = ${fmtNumClean(D)}` },
+    { label: L('ধাপ ২','Step 2'), value: `D${x} = ${fmtNumClean(Dx)},  D${y} = ${fmtNumClean(Dy)}` },
+    { label: L('ধাপ ৩','Step 3'), value: `${x} = D${x}/D = ${fmtNumClean(X)}\n${y} = D${y}/D = ${fmtNumClean(Y)}` }
+  ];
+  const v1 = Math.abs(f1(X,Y)), v2 = Math.abs(f2(X,Y));
+  return {
+    ok: true, kind: 'equation',
+    typeLabel: L('সমীকরণ জোড়া','Equation System'),
+    question: eq1 + '  ;  ' + eq2,
+    steps,
+    answer: `${x} = ${fmtNumClean(X)},  ${y} = ${fmtNumClean(Y)}`,
+    answerRaw: `${fmtNumClean(X)}, ${fmtNumClean(Y)}`,
+    verify: `${L('যাচাই','Check')}: |f₁| = ${fmtNum(v1)} ≈ 0, |f₂| = ${fmtNum(v2)} ≈ 0 ✓`,
+    explain: L('ক্রেমারের নিয়ম ব্যবহার করে দুই চলকের মান নির্ণয়।','Found both variables using Cramer\'s rule.'),
+    searchKey: 'equation'
+  };
+}
+
+/* ---------- Geometry ---------- */
+const SHAPES = {
+  square:{ name:{bn:'বর্গ',en:'Square'}, fields:[{k:'a',l:{bn:'বাহু (a)',en:'Side (a)'}}],
+    calc:v => [{l:{bn:'ক্ষেত্রফল',en:'Area'},v:v.a*v.a},{l:{bn:'পরিসীমা',en:'Perimeter'},v:4*v.a},{l:{bn:'কর্ণ',en:'Diagonal'},v:v.a*Math.SQRT2}] },
+  rectangle:{ name:{bn:'আয়তক্ষেত্র',en:'Rectangle'}, fields:[{k:'l',l:{bn:'দৈর্ঘ্য',en:'Length'}},{k:'w',l:{bn:'প্রস্থ',en:'Width'}}],
+    calc:v => [{l:{bn:'ক্ষেত্রফল',en:'Area'},v:v.l*v.w},{l:{bn:'পরিসীমা',en:'Perimeter'},v:2*(v.l+v.w)},{l:{bn:'কর্ণ',en:'Diagonal'},v:Math.hypot(v.l,v.w)}] },
+  triangle:{ name:{bn:'ত্রিভুজ',en:'Triangle'}, fields:[{k:'b',l:{bn:'ভূমি',en:'Base'}},{k:'h',l:{bn:'উচ্চতা',en:'Height'}},{k:'a',l:{bn:'বাহু a',en:'Side a'}},{k:'c',l:{bn:'বাহু c',en:'Side c'}}],
+    calc:v => { const area=0.5*v.b*v.h; const out=[{l:{bn:'ক্ষেত্রফল',en:'Area'},v:area}]; if (v.a>0 && v.c>0) { out.push({l:{bn:'পরিসীমা',en:'Perimeter'},v:v.a+v.b+v.c}); const s=(v.a+v.b+v.c)/2; out.push({l:{bn:'ক্ষেত্রফল (হিরণ)',en:'Area (Heron)'},v:Math.sqrt(Math.max(0,s*(s-v.a)*(s-v.b)*(s-v.c)))}); } return out; } },
+  circle:{ name:{bn:'বৃত্ত',en:'Circle'}, fields:[{k:'r',l:{bn:'ব্যাসার্ধ (r)',en:'Radius (r)'}}],
+    calc:v => [{l:{bn:'ক্ষেত্রফল',en:'Area'},v:Math.PI*v.r*v.r},{l:{bn:'পরিধি',en:'Circumference'},v:2*Math.PI*v.r},{l:{bn:'ব্যাস',en:'Diameter'},v:2*v.r}] },
+  parallelogram:{ name:{bn:'সামান্তরিক',en:'Parallelogram'}, fields:[{k:'b',l:{bn:'ভূমি',en:'Base'}},{k:'h',l:{bn:'উচ্চতা',en:'Height'}},{k:'a',l:{bn:'পার্শ্ব',en:'Side'}}],
+    calc:v => [{l:{bn:'ক্ষেত্রফল',en:'Area'},v:v.b*v.h},{l:{bn:'পরিসীমা',en:'Perimeter'},v:2*(v.b+(v.a||0))}] },
+  rhombus:{ name:{bn:'রম্বস',en:'Rhombus'}, fields:[{k:'d1',l:{bn:'কর্ণ ১',en:'Diagonal 1'}},{k:'d2',l:{bn:'কর্ণ ২',en:'Diagonal 2'}}],
+    calc:v => [{l:{bn:'ক্ষেত্রফল',en:'Area'},v:0.5*v.d1*v.d2},{l:{bn:'বাহু',en:'Side'},v:0.5*Math.hypot(v.d1,v.d2)},{l:{bn:'পরিসীমা',en:'Perimeter'},v:2*Math.hypot(v.d1,v.d2)}] },
+  trapezium:{ name:{bn:'ট্রাপিজিয়াম',en:'Trapezium'}, fields:[{k:'a',l:{bn:'সমান্তরাল a',en:'Parallel a'}},{k:'b',l:{bn:'সমান্তরাল b',en:'Parallel b'}},{k:'h',l:{bn:'উচ্চতা',en:'Height'}}],
+    calc:v => [{l:{bn:'ক্ষেত্রফল',en:'Area'},v:0.5*(v.a+v.b)*v.h}] },
+  cube:{ name:{bn:'ঘনক',en:'Cube'}, fields:[{k:'a',l:{bn:'বাহু',en:'Side'}}],
+    calc:v => [{l:{bn:'আয়তন',en:'Volume'},v:Math.pow(v.a,3)},{l:{bn:'পৃষ্ঠতল',en:'Surface Area'},v:6*v.a*v.a},{l:{bn:'কর্ণ',en:'Space Diagonal'},v:v.a*Math.sqrt(3)}] },
+  cuboid:{ name:{bn:'আয়তঘন',en:'Cuboid'}, fields:[{k:'l',l:{bn:'দৈর্ঘ্য',en:'Length'}},{k:'w',l:{bn:'প্রস্থ',en:'Width'}},{k:'h',l:{bn:'উচ্চতা',en:'Height'}}],
+    calc:v => [{l:{bn:'আয়তন',en:'Volume'},v:v.l*v.w*v.h},{l:{bn:'পৃষ্ঠতল',en:'Surface Area'},v:2*(v.l*v.w+v.w*v.h+v.h*v.l)},{l:{bn:'কর্ণ',en:'Space Diagonal'},v:Math.sqrt(v.l*v.l+v.w*v.w+v.h*v.h)}] },
+  cylinder:{ name:{bn:'সিলিন্ডার',en:'Cylinder'}, fields:[{k:'r',l:{bn:'ব্যাসার্ধ',en:'Radius'}},{k:'h',l:{bn:'উচ্চতা',en:'Height'}}],
+    calc:v => [{l:{bn:'আয়তন',en:'Volume'},v:Math.PI*v.r*v.r*v.h},{l:{bn:'বক্রপৃষ্ঠ',en:'Curved Surface'},v:2*Math.PI*v.r*v.h},{l:{bn:'সম্পূর্ণ পৃষ্ঠতল',en:'Total Surface'},v:2*Math.PI*v.r*(v.r+v.h)}] },
+  cone:{ name:{bn:'কোণক',en:'Cone'}, fields:[{k:'r',l:{bn:'ব্যাসার্ধ',en:'Radius'}},{k:'h',l:{bn:'উচ্চতা',en:'Height'}}],
+    calc:v => { const s=Math.hypot(v.r,v.h); return [{l:{bn:'আয়তন',en:'Volume'},v:(1/3)*Math.PI*v.r*v.r*v.h},{l:{bn:'হেলানো উচ্চতা',en:'Slant Height'},v:s},{l:{bn:'বক্রপৃষ্ঠ',en:'Curved Surface'},v:Math.PI*v.r*s},{l:{bn:'সম্পূর্ণ পৃষ্ঠতল',en:'Total Surface'},v:Math.PI*v.r*(v.r+s)}]; } },
+  sphere:{ name:{bn:'গোলক',en:'Sphere'}, fields:[{k:'r',l:{bn:'ব্যাসার্ধ',en:'Radius'}}],
+    calc:v => [{l:{bn:'আয়তন',en:'Volume'},v:(4/3)*Math.PI*Math.pow(v.r,3)},{l:{bn:'পৃষ্ঠতল',en:'Surface Area'},v:4*Math.PI*v.r*v.r}] }
+};
+
+/* ---------- Practice ---------- */
+const Practice = { level:'easy', cat:'algebra', current:null };
+const randInt = (a,b) => Math.floor(Math.random()*(b-a+1))+a;
+function generateQuestion(level, cat) {
+  if (cat === 'algebra') return genAlgebra(level);
+  if (cat === 'quadratic') return genQuadratic(level);
+  if (cat === 'percentage') return genPercentage(level);
+  if (cat === 'geometry') return genGeometry(level);
+  return genAlgebra(level);
+}
+function genAlgebra(level) {
+  if (level === 'easy') {
+    const x0 = randInt(1,12), a = randInt(2,9), b = randInt(-25,25), c = a*x0+b;
+    return { q:`${a}x ${b>=0?'+':'−'} ${Math.abs(b)} = ${c}`, sub:L('x-এর মান নির্ণয় করুন','Find x'),
+      answer:x0, explain:L(`উভয় পক্ষ ${b>=0?'থেকে '+Math.abs(b)+' বিয়োগ':'এ '+Math.abs(b)+' যোগ'} → ${a}x = ${c-b} → x = ${x0}`,
+                          `${b>=0?'Subtract':'Add'} ${Math.abs(b)} ${b>=0?'from':'to'} both sides → ${a}x = ${c-b} → x = ${x0}`) };
+  }
+  if (level === 'medium') {
+    const x0 = randInt(-9,12), a = randInt(2,9); let c = randInt(2,9); while (a===c) c = randInt(2,9);
+    const b = randInt(-15,15), d = a*x0+b-c*x0;
+    return { q:`${a}x ${b>=0?'+':'−'} ${Math.abs(b)} = ${c}x ${d>=0?'+':'−'} ${Math.abs(d)}`,
+      sub:L('x-এর মান নির্ণয় করুন','Find x'), answer:x0,
+      explain:L(`চলক একপাশে → ${a-c}x = ${d-b} → x = ${x0}`,`Bring variables to one side → ${a-c}x = ${d-b} → x = ${x0}`) };
+  }
+  const p = randInt(1,9), r = randInt(1,9), b = -(p+r), c = p*r;
+  return { q:`x² ${b>=0?'+':'−'} ${Math.abs(b)}x ${c>=0?'+':'−'} ${Math.abs(c)} = 0`,
+    sub:L('বড় মূলটি নির্ণয় করুন','Find larger root'), answer:Math.max(p,r),
+    explain:L(`(x − ${p})(x − ${r}) = 0 → x = ${p} বা ${r}`,`(x − ${p})(x − ${r}) = 0 → x = ${p} or ${r}`) };
+}
+function genQuadratic(level) {
+  const p = randInt(1,12), r = randInt(1,12), b = -(p+r), c = p*r;
+  if (level === 'easy') {
+    return { q:`x² ${b>=0?'+':'−'} ${Math.abs(b)}x ${c>=0?'+':'−'} ${Math.abs(c)} = 0`,
+      sub:L('বড় মূলটি নির্ণয় করুন','Find larger root'), answer:Math.max(p,r),
+      explain:L(`(x − ${p})(x − ${r}) = 0 → x = ${p} বা ${r}`,`(x − ${p})(x − ${r}) = 0 → x = ${p} or ${r}`) };
+  }
+  if (level === 'medium') {
+    const a = randInt(2,4);
+    return { q:`${a}x² ${a*b>=0?'+':'−'} ${Math.abs(a*b)}x ${a*c>=0?'+':'−'} ${Math.abs(a*c)} = 0`,
+      sub:L('ক্ষুদ্রতর মূলটি নির্ণয় করুন','Find smaller root'), answer:Math.min(p,r),
+      explain:L(`সহগ ${a} দিয়ে ভাগ → x² ${b>=0?'+':'−'} ${Math.abs(b)}x ${c>=0?'+':'−'} ${Math.abs(c)} = 0 → মূল ${p}, ${r}`,
+                `Divide by ${a} → x² ${b>=0?'+':'−'} ${Math.abs(b)}x ${c>=0?'+':'−'} ${Math.abs(c)} = 0 → roots ${p}, ${r}`) };
+  }
+  const a = randInt(2,5), rr = randInt(1,9), bb = -a*rr*2, cc = a*rr*rr;
+  return { q:`${a}x² ${bb>=0?'+':'−'} ${Math.abs(bb)}x + ${cc} = 0`,
+    sub:L('মূল নির্ণয় (পুনরাবৃত্ত)','Find root (repeated)'), answer:rr,
+    explain:L(`D = b² − 4ac = 0 → পুনরাবৃত্ত মূল x = −b/2a = ${rr}`,`D = b² − 4ac = 0 → repeated root x = −b/2a = ${rr}`) };
+}
+function genPercentage(level) {
+  const base = randInt(2,40)*5;
+  const pct = level === 'easy' ? randInt(1,10)*10 : randInt(1,20)*5;
+  return { q:L(`${base}-এর ${pct}% কত?`,`What is ${pct}% of ${base}?`),
+    sub:L('শতকরা হিসাব','Percentage'), answer:base*pct/100,
+    explain:L(`${base} × ${pct}/100 = ${base*pct/100}`,`${base} × ${pct}/100 = ${base*pct/100}`) };
+}
+function genGeometry(level) {
+  const kind = randInt(1,4);
+  if (kind === 1) { const r = randInt(1,12);
+    return { q:L(`বৃত্তের ব্যাসার্ধ ${r} হলে ক্ষেত্রফল? (π=3.1416)`,`Circle radius ${r} — find area. (π=3.1416)`),
+      sub:L('দশমিকসহ','Decimal'), answer:+(Math.PI*r*r).toFixed(2), tolerance:0.05,
+      explain:L(`Area = πr² = ${(Math.PI*r*r).toFixed(2)}`,`Area = πr² = ${(Math.PI*r*r).toFixed(2)}`) }; }
+  if (kind === 2) { const a = randInt(2,20);
+    return { q:L(`বর্গের বাহু ${a} হলে ক্ষেত্রফল?`,`Square side ${a} — find area.`),
+      sub:L('একক²','unit²'), answer:a*a, explain:L(`Area = a² = ${a*a}`,`Area = a² = ${a*a}`) }; }
+  if (kind === 3) { const l = randInt(3,20), w = randInt(2,15);
+    return { q:L(`আয়তক্ষেত্র ${l} × ${w} — পরিসীমা?`,`Rectangle ${l} × ${w} — perimeter?`),
+      sub:L('একক','unit'), answer:2*(l+w), explain:L(`P = 2(l+w) = ${2*(l+w)}`,`P = 2(l+w) = ${2*(l+w)}`) }; }
+  const b = randInt(4,20), h = randInt(3,16);
+  return { q:L(`ত্রিভুজের ভূমি ${b}, উচ্চতা ${h} — ক্ষেত্রফল?`,`Triangle base ${b}, height ${h} — area?`),
+    sub:L('দশমিক হতে পারে','May be decimal'), answer:0.5*b*h,
+    explain:L(`Area = ½ × ${b} × ${h} = ${0.5*b*h}`,`Area = ½ × ${b} × ${h} = ${0.5*b*h}`) };
+}
+
+/* ---------- UI helpers ---------- */
+let toastTimer = null;
+function toast(msg) {
+  const el = $('#toast');
+  el.textContent = msg;
+  el.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => el.classList.remove('show'), 2000);
+}
+let audioCtx = null;
+function beep(freq, dur) {
+  if (!State.sound) return;
+  try {
+    if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    const o = audioCtx.createOscillator(), g = audioCtx.createGain();
+    o.type = 'sine'; o.frequency.value = freq || 720;
+    g.gain.setValueAtTime(0.0001, audioCtx.currentTime);
+    g.gain.exponentialRampToValueAtTime(0.09, audioCtx.currentTime + 0.012);
+    g.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + (dur || 0.14));
+    o.connect(g); g.connect(audioCtx.destination);
+    o.start(); o.stop(audioCtx.currentTime + (dur || 0.15));
+  } catch (e) {}
+}
+
+/* ---------- Theme application ---------- */
+const VERSION_META = {
+  classic: { bn:'নরমাল এডিশন', en:'Normal Edition' },
+  premium: { bn:'প্রিমিয়াম এডিশন', en:'Premium Edition' },
+  cyber:   { bn:'ম্যাক্স লেভেল প্রো', en:'Max Level Pro' },
+  sumaiya: { bn:'সুমাইয়া স্পেশাল 💕', en:'Sumaiya Special 💕' }
+};
+function applyTheme() {
+  document.body.className = '';
+  document.body.classList.add('v-' + State.version);
+  document.body.classList.add('theme-' + State.theme);
+  if (!State.animation) document.body.classList.add('no-anim');
+  const meta = document.querySelector('meta[name="theme-color"]');
+  if (meta) {
+    const map = { 'v-classic':'#060b1c','v-premium':'#0a0618','v-cyber':'#010203','v-sumaiya':'#1a0d22' };
+    const lightMap = { 'v-classic':'#f6f8ff','v-premium':'#fbf7ff','v-cyber':'#eaf5fb','v-sumaiya':'#fef7fb' };
+    meta.setAttribute('content', State.theme === 'light' ? lightMap['v-'+State.version] : map['v-'+State.version]);
+  }
+  const sub = $('#brandSub');
+  if (sub) {
+    const m = VERSION_META[State.version];
+    sub.textContent = State.lang === 'bn' ? m.bn : m.en;
+  }
+  updateWelcome();
+  if (State.version === 'sumaiya') {
+    startDecorations();
+  } else {
+    stopDecorations();
+  }
+}
+function updateWelcome() {
+  const h = $('#welcomeTitle'); const p = $('#welcomeSub');
+  if (!h || !p) return;
+  if (State.version === 'sumaiya') {
+    h.textContent = t('sumaiyaWelcome');
+    p.textContent = t('sumaiyaSub');
+  } else {
+    h.textContent = t('welcome');
+    p.textContent = t('welcomeSub');
+  }
+}
+
+/* ---------- V4 Floating Decorations ---------- */
+const DECO_EMOJIS = ['🌸','💕','🌺','✨','🦋','💖','🌷','💐','🌹','🎀','💫','🌼','👑','💝','🩷'];
+let decoTimer = null;
+function startDecorations() {
+  const layer = $('#decorations');
+  if (!layer) return;
+  if (decoTimer) clearInterval(decoTimer);
+  layer.innerHTML = '';
+  const spawn = () => {
+    if (!document.body.classList.contains('v-sumaiya')) return;
+    if (document.body.classList.contains('no-anim')) return;
+    const el = document.createElement('div');
+    el.className = 'deco';
+    el.textContent = DECO_EMOJIS[Math.floor(Math.random() * DECO_EMOJIS.length)];
+    el.style.left = Math.random() * 95 + 'vw';
+    el.style.fontSize = (14 + Math.random() * 14) + 'px';
+    const dur = 10 + Math.random() * 8;
+    el.style.animationDuration = dur + 's';
+    el.style.animationDelay = '0s';
+    layer.appendChild(el);
+    setTimeout(() => { el.remove(); }, dur * 1000 + 500);
+  };
+  // Seed a few
+  for (let i = 0; i < 6; i++) setTimeout(spawn, i * 500);
+  decoTimer = setInterval(spawn, 1800);
+}
+function stopDecorations() {
+  if (decoTimer) { clearInterval(decoTimer); decoTimer = null; }
+  const layer = $('#decorations');
+  if (layer) layer.innerHTML = '';
+}
+
+/* ---------- V4 Welcome Greeting ---------- */
+let lastVersion = null;
+function maybeShowSumaiyaGreeting() {
+  if (State.version === 'sumaiya' && lastVersion !== 'sumaiya') {
+    const overlay = $('#greetingOverlay');
+    if (overlay) {
+      $('#greetTitle').textContent = State.lang === 'bn' ? 'SUMAIYA SPECIAL 💕' : 'SUMAIYA SPECIAL 💕';
+      $('#greetMsg').innerHTML = State.lang === 'bn'
+        ? 'স্বাগতম সুমাইয়া! 🌸<br>এই বিশেষ এডিশনটি শুধু তোমার জন্য<br>ভালোবাসা দিয়ে সাজানো 💖'
+        : 'Welcome Sumaiya! 🌸<br>This special edition is crafted just for you<br>with love and care 💖';
+      $('#greetClose').textContent = State.lang === 'bn' ? 'চলো শুরু করি 💖' : 'Let\'s begin 💖';
+      overlay.classList.add('show');
+      setTimeout(() => beep(880, 0.15), 300);
+      setTimeout(() => beep(1100, 0.15), 550);
+    }
+  }
+  lastVersion = State.version;
+}
+
+/* ---------- Language application ---------- */
+function applyLanguage() {
+  document.documentElement.lang = State.lang;
+  $$('[data-i18n]').forEach(e => { e.textContent = t(e.dataset.i18n); });
+  $('#langBtn').textContent = State.lang === 'bn' ? 'বাং' : 'EN';
+  $('#netTxt').textContent = navigator.onLine ? t('online') : t('offline');
+  updateWelcome();
+  renderQuickCats();
+  renderExamples();
+  renderHomeRecent();
+  renderHistory();
+  renderPracticeStats();
+  updateDailyLine();
+  applyTheme();
+}
+
+/* ---------- View switching ---------- */
+function switchView(name) {
+  State.view = name;
+  $$('.view').forEach(v => v.classList.remove('active'));
+  const target = $('#view-' + name);
+  if (target) target.classList.add('active');
+  $$('.nav-item').forEach(b => b.classList.toggle('active', b.dataset.view === name));
+  window.scrollTo({ top: 0, behavior: State.animation ? 'smooth' : 'auto' });
+}
+
+/* ---------- Render solution ---------- */
+function renderSolution(res) {
+  const out = $('#solutionOut');
+  let html = '<div class="card sol-card">';
+  html += '<div class="sol-head"><span class="badge">' + esc(res.typeLabel) + '</span><span class="sol-type">' + esc(t('stepsLabel')) + '</span></div>';
+  html += '<div class="sol-q">' + esc(res.question) + '</div>';
+  html += '<div class="steps">';
+  res.steps.forEach((s, i) => {
+    html += '<div class="step"><div class="step-n">' + (i+1) + '</div><div class="step-b">';
+    html += '<div class="step-l">' + esc(s.label) + '</div>';
+    html += '<div class="step-v">' + esc(s.value) + '</div>';
+    html += '</div></div>';
+  });
+  html += '</div>';
+  html += '<div class="answer-box"><div class="ab-l">' + esc(t('answerLabel')) + '</div><div class="ab-v">' + esc(res.answer) + '</div></div>';
+  if (res.verify) html += '<div class="verify">✓ <b>' + esc(t('verifyLabel')) + ':</b> ' + esc(res.verify) + '</div>';
+  if (res.explain) html += '<div class="explain">💡 <b>' + esc(t('explainLabel')) + ':</b> ' + esc(res.explain) + '</div>';
+  html += '<div class="sol-actions"><button class="btn ghost sm" id="copyAnswerBtn">📋 ' + esc(t('copy')) + '</button><button class="btn ghost sm" id="resaveBtn">💾 ' + esc(t('saved')) + '</button></div>';
+  html += '</div>';
+  out.innerHTML = html;
+  const cb = $('#copyAnswerBtn'); if (cb) cb.addEventListener('click', () => copyText(res.answer));
+  const sb = $('#resaveBtn'); if (sb) sb.addEventListener('click', () => { addHistory(res.question, res.answer, res.searchKey); toast(t('saved')); });
+  out.scrollIntoView({ behavior: State.animation ? 'smooth' : 'auto', block: 'nearest' });
+}
+function copyText(txt) {
+  const done = () => toast(t('copied'));
+  const fail = () => {
+    try {
+      const ta = document.createElement('textarea');
+      ta.value = txt; ta.style.position = 'fixed'; ta.style.opacity = '0';
+      document.body.appendChild(ta); ta.select(); document.execCommand('copy');
+      document.body.removeChild(ta); done();
+    } catch (e) { toast(t('copyFail')); }
+  };
+  if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(txt).then(done).catch(fail);
+  else fail();
+}
+
+/* ---------- Errors ---------- */
+function showSolveError(err) {
+  const box = $('#solveError');
+  const info = formatError(err);
+  let html = '<b>⚠ ' + esc(info.title) + '</b>';
+  if (info.hint) html += '<div>' + esc(info.hint) + '</div>';
+  if (info.example) html += '<div class="ex">' + esc(L('সঠিক উদাহরণ','Correct example')) + ': <span>' + esc(info.example) + '</span></div>';
+  box.innerHTML = html;
+  box.classList.remove('hidden');
+}
+function hideSolveError() {
+  const box = $('#solveError');
+  box.classList.add('hidden'); box.innerHTML = '';
+}
+
+/* ---------- History ---------- */
+function addHistory(q, a, kind) {
+  const item = { id: uid(), q: String(q).slice(0, 400), a: String(a).slice(0, 400), kind: kind || 'arith', ts: Date.now() };
+  State.history.unshift(item);
+  if (State.history.length > 300) State.history.length = 300;
+  saveState();
+  renderHomeRecent(); renderHistory();
+}
+function renderHomeRecent() {
+  const box = $('#homeRecent'); if (!box) return;
+  const items = State.history.slice(0, 3);
+  if (!items.length) { box.innerHTML = '<div class="empty"><span class="em">' + t('noHistoryIcon') + '</span>' + esc(t('noHistory')) + '</div>'; return; }
+  box.innerHTML = items.map(h => `
+    <div class="hist-item" data-open="${esc(h.q)}">
+      <div class="hist-main"><div class="hist-q">${esc(h.q)}</div><div class="hist-a">= ${esc(h.a)}</div></div>
+      <button class="hist-del" data-del="${esc(h.id)}">✕</button>
+    </div>`).join('');
+  box.querySelectorAll('[data-open]').forEach(el => {
+    el.addEventListener('click', ev => { if (ev.target.closest('[data-del]')) return; openHistoryItem(el.dataset.open); });
+  });
+  box.querySelectorAll('[data-del]').forEach(el => {
+    el.addEventListener('click', ev => { ev.stopPropagation(); deleteHistory(el.dataset.del); });
+  });
+}
+let historyFilter = 'all';
+function renderHistory() {
+  const box = $('#histList'); if (!box) return;
+  const q = ($('#histSearch') && $('#histSearch').value || '').toLowerCase().trim();
+  let items = State.history;
+  if (historyFilter !== 'all') items = items.filter(h => h.kind === historyFilter);
+  if (q) items = items.filter(h => h.q.toLowerCase().includes(q) || h.a.toLowerCase().includes(q));
+  if (!items.length) { box.innerHTML = '<div class="empty"><span class="em">' + t('noHistoryIcon') + '</span>' + esc(t('noHistory')) + '</div>'; return; }
+  box.innerHTML = items.map(h => `
+    <div class="hist-item" data-open="${esc(h.q)}">
+      <div class="hist-main"><div class="hist-q">${esc(h.q)}</div><div class="hist-a">= ${esc(h.a)}</div></div>
+      <button class="hist-del" data-del="${esc(h.id)}">✕</button>
+    </div>`).join('');
+  box.querySelectorAll('[data-open]').forEach(el => {
+    el.addEventListener('click', ev => { if (ev.target.closest('[data-del]')) return; openHistoryItem(el.dataset.open); });
+  });
+  box.querySelectorAll('[data-del]').forEach(el => {
+    el.addEventListener('click', ev => { ev.stopPropagation(); deleteHistory(el.dataset.del); });
+  });
+}
+function deleteHistory(id) {
+  State.history = State.history.filter(h => h.id !== id);
+  saveState(); renderHomeRecent(); renderHistory(); beep(420, 0.08);
+}
+function openHistoryItem(q) {
+  switchView('solve'); $('#solveInput').value = q;
+  setTimeout(() => runSolve(q), 120);
+}
+
+/* ---------- Quick categories ---------- */
+const QUICK_CATS = [
+  { icon:'➕', bn:'পাটিগণিত', en:'Arithmetic', ex:'25 + 35 × 2' },
+  { icon:'🧮', bn:'বীজগণিত', en:'Algebra', ex:'2x + 5 = 15' },
+  { icon:'🎯', bn:'দ্বিঘাত', en:'Quadratic', ex:'x^2 - 5x + 6 = 0' },
+  { icon:'🔗', bn:'সমীকরণ জোড়া', en:'System', ex:'x + y = 5\nx - y = 1' },
+  { icon:'📊', bn:'শতকরা', en:'Percentage', ex:'15% of 200' },
+  { icon:'√', bn:'মূল ও ঘাত', en:'Roots & Powers', ex:'sqrt(2) + 3^3' },
+  { icon:'🔢', bn:'ল.সা.গু / গ.সা.গু', en:'LCM / GCD', ex:'lcm(12, 18)' },
+  { icon:'📐', bn:'জ্যামিতি', en:'Geometry', modal:'geometry' }
+];
+/* V4 specific cute categories */
+const SUMAIYA_CATS = [
+  { icon:'🌸', bn:'পাটিগণিত', en:'Arithmetic', ex:'25 + 35 × 2' },
+  { icon:'💕', bn:'বীজগণিত', en:'Algebra', ex:'2x + 5 = 15' },
+  { icon:'🦋', bn:'দ্বিঘাত', en:'Quadratic', ex:'x^2 - 5x + 6 = 0' },
+  { icon:'🌹', bn:'সমীকরণ জোড়া', en:'System', ex:'x + y = 5\nx - y = 1' },
+  { icon:'🎀', bn:'শতকরা', en:'Percentage', ex:'15% of 200' },
+  { icon:'✨', bn:'মূল ও ঘাত', en:'Roots & Powers', ex:'sqrt(2) + 3^3' },
+  { icon:'💐', bn:'ল.সা.গু / গ.সা.গু', en:'LCM / GCD', ex:'lcm(12, 18)' },
+  { icon:'🌷', bn:'জ্যামিতি', en:'Geometry', modal:'geometry' }
+];
+function renderQuickCats() {
+  const box = $('#quickCats'); if (!box) return;
+  const cats = State.version === 'sumaiya' ? SUMAIYA_CATS : QUICK_CATS;
+  box.innerHTML = cats.map((c, i) => `<button class="chip" data-cat="${i}">${c.icon} ${esc(State.lang === 'bn' ? c.bn : c.en)}</button>`).join('');
+  box.querySelectorAll('[data-cat]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const c = cats[Number(btn.dataset.cat)];
+      if (c.modal === 'geometry') { openGeometryModal(); return; }
+      switchView('solve'); $('#solveInput').value = c.ex;
+      setTimeout(() => runSolve(c.ex), 130);
+    });
+  });
+}
+const EXAMPLES = [
+  '25 + 35', '(5 + 3) × 2', '100 / 4',
+  '2x + 5 = 15', 'x^2 - 5x + 6 = 0', 'x^2 + 1 = 0',
+  'x^2 - 4x + 4 = 0', 'x + y = 5\nx - y = 1',
+  'lcm(12, 18)', 'gcd(48, 18)', '5!', 'sqrt(144)', '15% of 200', '২x + ৫ = ১৫'
+];
+function renderExamples() {
+  const box = $('#exampleChips'); if (!box) return;
+  box.innerHTML = EXAMPLES.map(e => `<button class="chip" data-ex="${esc(e)}">${esc(e.replace(/\n/g, ' ; '))}</button>`).join('');
+  box.querySelectorAll('[data-ex]').forEach(b => {
+    b.addEventListener('click', () => { $('#solveInput').value = b.dataset.ex; runSolve(b.dataset.ex); });
+  });
+}
+
+/* ---------- Symbol keyboard ---------- */
+let activeInput = null;
+document.addEventListener('focusin', e => {
+  if (e.target.matches('textarea, input[type="text"], input[type="number"]')) activeInput = e.target;
+});
+const SYMBOL_LAYOUT = [
+  {label:'7', sym:'7'}, {label:'8', sym:'8'}, {label:'9', sym:'9'},
+  {label:'÷', sym:'/', cls:'fn'}, {label:'×', sym:'*', cls:'fn'},
+  {label:'(', sym:'('}, {label:')', sym:')'}, {label:'⌫', action:'backspace', cls:'warn'},
+
+  {label:'4', sym:'4'}, {label:'5', sym:'5'}, {label:'6', sym:'6'},
+  {label:'−', sym:'-', cls:'fn'}, {label:'+', sym:'+', cls:'fn'},
+  {label:'√', sym:'sqrt()', cur:-1},
+  {label:'π', sym:'pi'},
+  {label:'Clear', action:'clear', cls:'warn'},
+
+  {label:'1', sym:'1'}, {label:'2', sym:'2'}, {label:'3', sym:'3'},
+  {label:'=', sym:'='}, {label:'≠', sym:'!='},
+  {label:'≤', sym:'<='}, {label:'≥', sym:'>='}, {label:'%', sym:'%'},
+
+  {label:'0', sym:'0'}, {label:'.', sym:'.'},
+  {label:'x²', sym:'^2', cls:'fn'}, {label:'x³', sym:'^3', cls:'fn'},
+  {label:'xⁿ', sym:'^', cls:'fn'},
+  {label:'^', sym:'^'}, {label:'!', sym:'!'},
+  {label:'a/b', sym:'/', cls:'fn'},
+
+  {label:'sin', sym:'sin()', cur:-1, cls:'fn'},
+  {label:'cos', sym:'cos()', cur:-1, cls:'fn'},
+  {label:'tan', sym:'tan()', cur:-1, cls:'fn'},
+  {label:'log', sym:'log()', cur:-1, cls:'fn'},
+  {label:'ln', sym:'ln()', cur:-1, cls:'fn'},
+  {label:'[', sym:'('}, {label:']', sym:')'}, {label:'{', sym:'('}
+];
+function renderSymbolPad() {
+  const box = $('#symbolPad'); if (!box) return;
+  box.innerHTML = SYMBOL_LAYOUT.map((s, i) => {
+    const cls = 'sym' + (s.cls ? ' ' + s.cls : '');
+    return `<button class="${cls}" data-sym-i="${i}">${esc(s.label)}</button>`;
+  }).join('');
+  box.querySelectorAll('[data-sym-i]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const s = SYMBOL_LAYOUT[Number(btn.dataset.symI)];
+      handleSymbol(s);
+    });
+  });
+}
+function handleSymbol(s) {
+  if (!activeInput) activeInput = $('#solveInput');
+  if (!activeInput) return;
+  if (s.action === 'clear') { activeInput.value = ''; activeInput.focus(); return; }
+  if (s.action === 'backspace') {
+    const start = activeInput.selectionStart ?? activeInput.value.length;
+    const end = activeInput.selectionEnd ?? start;
+    if (start !== end) {
+      activeInput.value = activeInput.value.slice(0, start) + activeInput.value.slice(end);
+      try { activeInput.setSelectionRange(start, start); } catch (e) {}
+    } else if (start > 0) {
+      activeInput.value = activeInput.value.slice(0, start-1) + activeInput.value.slice(end);
+      try { activeInput.setSelectionRange(start-1, start-1); } catch (e) {}
+    }
+    activeInput.focus(); activeInput.dispatchEvent(new Event('input', {bubbles:true})); return;
+  }
+  if (s.sym) {
+    const start = activeInput.selectionStart ?? activeInput.value.length;
+    const end = activeInput.selectionEnd ?? start;
+    const insert = s.sym;
+    activeInput.value = activeInput.value.slice(0, start) + insert + activeInput.value.slice(end);
+    let pos = start + insert.length + (s.cur || 0);
+    activeInput.focus();
+    try { activeInput.setSelectionRange(pos, pos); } catch (e) {}
+    activeInput.dispatchEvent(new Event('input', {bubbles:true}));
+    beep(660, 0.04);
+  }
+}
+
+/* ---------- Solve ---------- */
+let solving = false;
+function runSolve(raw) {
+  if (solving) return;
+  const input = (raw == null ? $('#solveInput').value : raw);
+  hideSolveError();
+  $('#solutionOut').innerHTML = '';
+  if (!String(input).trim()) { showSolveError(new MathError('EMPTY')); beep(300, 0.12); return; }
+  solving = true;
+  const btn = $('#solveBtn'); const oldLabel = btn.textContent;
+  btn.innerHTML = '<span class="spinner"></span>'; btn.disabled = true;
+  setTimeout(() => {
+    try {
+      const res = solveProblem(input);
+      renderSolution(res);
+      addHistory(res.question, res.answer, res.searchKey);
+      beep(880, 0.12);
+    } catch (err) {
+      if (err instanceof MathError) showSolveError(err);
+      else { console.error('[MOMIN]', err); showSolveError(new MathError('PARSE')); }
+      beep(280, 0.16);
+    } finally {
+      solving = false;
+      btn.innerHTML = esc(oldLabel); btn.disabled = false;
+    }
+  }, 40);
+}
+
+/* ---------- Geometry modal ---------- */
+function openGeometryModal() {
+  const modal = $('#modal');
+  const keys = Object.keys(SHAPES);
+  let html = '<div class="label">' + esc(L('আকার','Shape')) + '</div>';
+  html += '<select class="sel" id="shapeSel" style="width:100%;padding:12px;margin-bottom:14px">';
+  keys.forEach(k => { html += `<option value="${k}">${esc(SHAPES[k].name[State.lang] || SHAPES[k].name.en)}</option>`; });
+  html += '</select><div id="shapeFields"></div>';
+  html += '<button class="btn primary full" id="shapeCompute" style="margin-top:14px">' + esc(L('হিসাব করুন','Compute')) + '</button>';
+  html += '<div id="shapeResult" style="margin-top:14px"></div>';
+  $('#modalTitle').textContent = L('জ্যামিতি ক্যালকুলেটর','Geometry Calculator');
+  $('#modalBody').innerHTML = html;
+  const renderFields = () => {
+    const key = $('#shapeSel').value;
+    const shape = SHAPES[key];
+    $('#shapeFields').innerHTML = shape.fields.map(f => `
+      <div style="margin-bottom:10px">
+        <div class="label" style="margin-bottom:5px">${esc(f.l[State.lang] || f.l.en)}</div>
+        <input class="math-input" style="min-height:46px;font-size:16px" type="number" step="any" data-field="${f.k}" placeholder="0" />
+      </div>`).join('');
+    $('#shapeResult').innerHTML = '';
+  };
+  renderFields();
+  $('#shapeSel').addEventListener('change', renderFields);
+  $('#shapeCompute').addEventListener('click', () => {
+    try {
+      const shape = SHAPES[$('#shapeSel').value];
+      const vals = {}; let bad = false;
+      shape.fields.forEach(f => {
+        const num = parseFloat($(`[data-field="${f.k}"]`).value);
+        if (!isFinite(num) || num < 0) { bad = true; return; }
+        vals[f.k] = num;
+      });
+      if (bad) { $('#shapeResult').innerHTML = '<div class="err-box">⚠ ' + esc(L('সব ঘরে শূন্য বা ধনাত্মক সংখ্যা দিন।','Fill every field with a zero or positive number.')) + '</div>'; return; }
+      const results = shape.calc(vals);
+      $('#shapeResult').innerHTML = results.map(r => `
+        <div class="hist-item" style="margin-bottom:8px">
+          <div class="hist-main">
+            <div class="hist-a" style="color:var(--txt-dim);font-family:var(--font);font-size:11px;font-weight:700;letter-spacing:.5px;text-transform:uppercase">${esc(r.l[State.lang] || r.l.en)}</div>
+            <div class="hist-q" style="font-size:19px;color:var(--txt)">${esc(fmtNum(r.v))}</div>
+          </div>
+        </div>`).join('');
+      beep(880, 0.1);
+    } catch (e) { $('#shapeResult').innerHTML = '<div class="err-box">⚠ ' + esc(L('হিসাব করা যায়নি।','Could not compute.')) + '</div>'; }
+  });
+  modal.classList.add('show');
+}
+
+/* ---------- Camera / OCR ---------- */
+const Scanner = { stream:null, image:null, sourceCanvas:null, rotation:0, enhanced:false };
+async function startCamera() {
+  const video = $('#video'), ph = $('#camPlaceholder');
+  if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) { toast(t('camUnsupported')); return; }
+  try {
+    const stream = await navigator.mediaDevices.getUserMedia({
+      video: { facingMode: { ideal:'environment' }, width:{ ideal:1280 }, height:{ ideal:960 } },
+      audio: false
+    });
+    Scanner.stream = stream;
+    video.srcObject = stream;
+    await video.play().catch(() => {});
+    video.classList.add('on'); ph.style.display = 'none';
+    $('#captureBtn').disabled = false;
+    $('#startCamBtn').textContent = L('ক্যামেরা বন্ধ','Stop Camera');
+    beep(660, 0.1);
+  } catch (e) { console.warn('[MOMIN] camera', e); toast(t('camDenied')); }
+}
+function stopCamera() {
+  if (Scanner.stream) { Scanner.stream.getTracks().forEach(tr => tr.stop()); Scanner.stream = null; }
+  const video = $('#video');
+  video.classList.remove('on'); video.srcObject = null;
+  $('#camPlaceholder').style.display = 'flex';
+  $('#captureBtn').disabled = true;
+  $('#startCamBtn').textContent = t('startCamera');
+}
+function capturePhoto() {
+  const video = $('#video');
+  if (!video.videoWidth) return;
+  const c = document.createElement('canvas');
+  c.width = video.videoWidth; c.height = video.videoHeight;
+  c.getContext('2d').drawImage(video, 0, 0);
+  setScanImage(c); stopCamera(); beep(760, 0.1);
+}
+function setScanImage(canvas) {
+  Scanner.sourceCanvas = canvas;
+  Scanner.rotation = 0; Scanner.enhanced = false;
+  renderScanCanvas();
+  $('#ocrBtn').disabled = false;
+  $('#scanCanvas').style.display = 'block';
+}
+function renderScanCanvas() {
+  if (!Scanner.sourceCanvas) return;
+  const src = Scanner.sourceCanvas;
+  const rot = Scanner.rotation % 360;
+  const swap = rot === 90 || rot === 270;
+  const maxW = 1100;
+  let w = swap ? src.height : src.width;
+  let h = swap ? src.width : src.height;
+  const scale = Math.min(1, maxW / Math.max(w, h));
+  w = Math.round(w * scale); h = Math.round(h * scale);
+  const out = document.createElement('canvas');
+  out.width = w; out.height = h;
+  const ctx = out.getContext('2d');
+  ctx.save();
+  ctx.translate(w/2, h/2);
+  ctx.rotate(rot * Math.PI / 180);
+  const dw = swap ? h : w;
+  const dh = swap ? w : h;
+  ctx.drawImage(src, -dw/2, -dh/2, dw, dh);
+  ctx.restore();
+  if (Scanner.enhanced) {
+    const img = ctx.getImageData(0, 0, w, h);
+    const d = img.data, contrast = 1.65, intercept = 128 * (1 - contrast);
+    for (let i = 0; i < d.length; i += 4) {
+      let g = 0.299*d[i] + 0.587*d[i+1] + 0.114*d[i+2];
+      g = clamp(g * contrast + intercept, 0, 255);
+      d[i] = d[i+1] = d[i+2] = g;
+    }
+    ctx.putImageData(img, 0, 0);
+  }
+  const sc = $('#scanCanvas');
+  sc.width = w; sc.height = h;
+  sc.getContext('2d').drawImage(out, 0, 0);
+  Scanner.image = out;
+}
+function handleFile(file) {
+  if (!file) return;
+  if (!/^image\//.test(file.type)) { toast(L('শুধু ছবি ফাইল দিন।','Please provide an image file.')); return; }
+  if (file.size > 14 * 1024 * 1024) { toast(L('ছবি অত্যন্ত বড় (সর্বোচ্চ ১৪MB)।','Image too large (max 14MB).')); return; }
+  const reader = new FileReader();
+  reader.onload = e => {
+    const img = new Image();
+    img.onload = () => {
+      const c = document.createElement('canvas');
+      c.width = img.width; c.height = img.height;
+      c.getContext('2d').drawImage(img, 0, 0);
+      setScanImage(c); stopCamera(); beep(700, 0.1);
+    };
+    img.onerror = () => toast(L('ছবি লোড হয়নি।','Could not load image.'));
+    img.src = e.target.result;
+  };
+  reader.onerror = () => toast(L('ফাইল পড়া যায়নি。','Could not read file.'));
+  reader.readAsDataURL(file);
+}
+function loadTesseract(timeoutMs) {
+  return new Promise((resolve, reject) => {
+    if (window.Tesseract) return resolve(window.Tesseract);
+    const s = document.createElement('script');
+    s.src = 'https://cdn.jsdelivr.net/npm/tesseract.js@5.1.0/dist/tesseract.min.js';
+    s.async = true;
+    const timer = setTimeout(() => reject(new Error('timeout')), timeoutMs || 22000);
+    s.onload = () => { clearTimeout(timer); window.Tesseract ? resolve(window.Tesseract) : reject(new Error('no-lib')); };
+    s.onerror = () => { clearTimeout(timer); reject(new Error('cdn-fail')); };
+    document.head.appendChild(s);
+  });
+}
+async function runOCR() {
+  if (!Scanner.image) return;
+  const btn = $('#ocrBtn'); const old = btn.textContent;
+  if (!navigator.onLine) toast(t('ocrOffline'));
+  btn.innerHTML = '<span class="spinner"></span> ' + esc(t('ocrLoading'));
+  btn.disabled = true; $('#ocrText').value = '';
+  try {
+    const T = await loadTesseract();
+    const result = await T.recognize(Scanner.image, 'eng', {
+      logger: m => { if (m.status === 'recognizing text') btn.innerHTML = '<span class="spinner"></span> ' + Math.round((m.progress||0)*100) + '%'; }
+    });
+    let text = (result && result.data && result.data.text) || '';
+    text = text.replace(/\s+/g, ' ').trim();
+    text = text.replace(/[|।]/g, '').replace(/[×✕]/g, '×').replace(/\s*([=+\-×÷])\s*/g, ' $1 ').replace(/\s+/g, ' ').trim();
+    $('#ocrText').value = text;
+    if (!text) toast(L('কোনো টেক্সট পাওয়া যায়নি।','No text detected.'));
+    else beep(900, 0.12);
+  } catch (e) { console.warn('[MOMIN] OCR', e); toast(t('ocrFailed')); }
+  finally { btn.textContent = old; btn.disabled = false; }
+}
+
+/* ---------- Practice ---------- */
+function newPracticeQuestion() {
+  const fb = $('#pFeedback'); fb.classList.remove('show'); fb.className = 'feedback';
+  $('#ansInput').value = '';
+  $('#qText').textContent = '…'; $('#qSub').textContent = t('loadQuestion');
+  setTimeout(() => {
+    try {
+      Practice.current = generateQuestion(Practice.level, Practice.cat);
+      $('#qText').textContent = Practice.current.q;
+      $('#qSub').textContent = Practice.current.sub || '';
+    } catch (e) { $('#qText').textContent = '—'; }
+  }, 90);
+}
+function parseNumericAnswer(str) {
+  const norm = normalizeInput(str).replace(/=+$/, '').trim();
+  if (!norm) return null;
+  try {
+    const ast = parseExprString(norm);
+    if (collectVars(ast, new Set()).size > 0) return null;
+    const v = evalNode(ast, {});
+    return isFinite(v) ? v : null;
+  } catch (e) { return null; }
+}
+function checkPracticeAnswer() {
+  const cur = Practice.current; if (!cur) return;
+  const raw = $('#ansInput').value.trim();
+  const fb = $('#pFeedback');
+  if (!raw) { fb.className = 'feedback bad show'; fb.innerHTML = '<b>⚠</b>' + esc(t('enterAnswer')); return; }
+  const val = parseNumericAnswer(raw);
+  const tol = cur.tolerance || 1e-6;
+  const ok = val != null && Math.abs(val - cur.answer) <= tol;
+  State.practice.total++;
+  if (ok) {
+    State.practice.score++; State.practice.streak++;
+    State.practice.best = Math.max(State.practice.best, State.practice.streak);
+    fb.className = 'feedback ok show';
+    fb.innerHTML = '<b>' + esc(t('correct')) + '</b>' + esc(L('সঠিক উত্তর: ','Correct answer: ')) + '<b>' + esc(fmtNum(cur.answer)) + '</b><br><span style="font-size:12.5px;color:var(--txt-dim)">' + esc(cur.explain || '') + '</span>';
+    beep(980, 0.13);
+  } else {
+    State.practice.streak = 0;
+    fb.className = 'feedback bad show';
+    fb.innerHTML = '<b>' + esc(t('incorrect')) + '</b>' + esc(L('সঠিক উত্তর: ','Correct answer: ')) + '<b>' + esc(fmtNum(cur.answer)) + '</b><br><span style="font-size:12.5px;color:var(--txt-dim)">' + esc(cur.explain || '') + '</span>';
+    beep(280, 0.16);
+  }
+  saveState(); renderPracticeStats(); updateDailyLine();
+}
+function renderPracticeStats() {
+  $('#pScore').textContent = State.practice.score;
+  $('#pTotal').textContent = State.practice.total;
+  $('#pStreak').textContent = State.practice.streak;
+  $('#streakBadge').textContent = '🔥 ' + State.practice.streak;
+}
+function updateDailyLine() {
+  const acc = State.practice.total ? Math.round((State.practice.score / State.practice.total) * 100) : 0;
+  $('#dailyLine').textContent = L(
+    `স্কোর: ${State.practice.score} / ${State.practice.total}  •  নির্ভুলতা: ${acc}%`,
+    `Score: ${State.practice.score} / ${State.practice.total}  •  Accuracy: ${acc}%`
+  );
+}
+
+/* ---------- Export ---------- */
+function download(filename, content, mime) {
+  try {
+    const blob = new Blob([content], { type: mime || 'text/plain;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url; a.download = filename;
+    document.body.appendChild(a); a.click();
+    setTimeout(() => { URL.revokeObjectURL(url); a.remove(); }, 500);
+  } catch (e) { toast(L('এক্সপোর্ট ব্যর্থ','Export failed')); }
+}
+function exportTxt() {
+  if (!State.history.length) { toast(t('noHistory')); return; }
+  const lines = State.history.map((h, i) => {
+    const d = new Date(h.ts).toLocaleString();
+    return `${i+1}. [${d}]\n   Q: ${h.q}\n   A: ${h.a}\n`;
+  }).join('\n');
+  download('momin-math-history.txt', 'MOMIN MATH AI PRO — History\n============================\n\n' + lines);
+}
+function exportJson() {
+  if (!State.history.length) { toast(t('noHistory')); return; }
+  download('momin-math-history.json', JSON.stringify({
+    app:'MOMIN MATH AI PRO', version:'4.1.0', exportedAt:new Date().toISOString(), history:State.history
+  }, null, 2), 'application/json');
+}
+
+/* ---------- Particles ---------- */
+function initParticles() {
+  const canvas = $('#particles'); if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  let w, h, dots = [];
+  function resize() {
+    w = canvas.width = window.innerWidth; h = canvas.height = window.innerHeight;
+    const count = Math.min(38, Math.floor(w * h / 26000));
+    dots = [];
+    for (let i = 0; i < count; i++) {
+      dots.push({ x:Math.random()*w, y:Math.random()*h, r:Math.random()*1.9+0.5,
+        vx:(Math.random()-0.5)*0.24, vy:(Math.random()-0.5)*0.24, a:Math.random()*0.45+0.15,
+        hue: document.body.classList.contains('v-sumaiya') ? (Math.random() > 0.5 ? 330 : 275) : (Math.random() > 0.5 ? 262 : 190) });
+    }
+  }
+  function frame() {
+    if (document.body.classList.contains('no-anim')) { ctx.clearRect(0,0,w,h); requestAnimationFrame(frame); return; }
+    ctx.clearRect(0,0,w,h);
+    for (const d of dots) {
+      d.x += d.vx; d.y += d.vy;
+      if (d.x < 0 || d.x > w) d.vx *= -1;
+      if (d.y < 0 || d.y > h) d.vy *= -1;
+      ctx.beginPath(); ctx.arc(d.x, d.y, d.r, 0, Math.PI * 2);
+      ctx.fillStyle = `hsla(${d.hue}, 90%, 72%, ${d.a})`; ctx.fill();
+    }
+    requestAnimationFrame(frame);
+  }
+  resize(); window.addEventListener('resize', resize); frame();
+}
+
+/* ---------- Network ---------- */
+function updateNet() {
+  const pill = $('#netPill'), txt = $('#netTxt');
+  const online = navigator.onLine;
+  pill.classList.toggle('off', !online);
+  txt.textContent = online ? t('online') : t('offline');
+}
+
+/* ---------- Settings modal ---------- */
+const VERSION_CARDS = [
+  { id:'classic', name:{bn:'নরমাল',en:'Normal'}, tag:{bn:'ক্লাসিক',en:'Classic'},
+    sw:['#7c5cff','#4a6eff','#22d3ee','#0f1a3a'] },
+  { id:'premium', name:{bn:'প্রিমিয়াম',en:'Premium'}, tag:{bn:'লাক্সারি',en:'Luxury'},
+    sw:['#a855f7','#d4af37','#e9d5ff','#1f124a'] },
+  { id:'cyber', name:{bn:'সাইবার প্রো',en:'Cyber Pro'}, tag:{bn:'ম্যাক্স লেভেল',en:'Max Level'},
+    sw:['#00e5ff','#bf00ff','#00ff9d','#0a1628'] },
+  { id:'sumaiya', name:{bn:'সুমাইয়া 💕',en:'Sumaiya 💕'}, tag:{bn:'স্পেশাল',en:'Special'},
+    sw:['#f9a8d4','#ec4899','#e9d5ff','#3a2242'] }
+];
+function openSettings() {
+  const modal = $('#modal');
+  let html = '';
+  html += '<div class="label">' + esc(t('versionLabel')) + ' · ' + esc(t('versionDesc')) + '</div>';
+  html += '<div class="theme-grid">';
+  VERSION_CARDS.forEach(v => {
+    const active = State.version === v.id ? ' active' : '';
+    html += `<button class="theme-card${active}" data-version-pick="${v.id}">
+      <div class="theme-swatches">${v.sw.map(c => `<i style="background:${c}"></i>`).join('')}</div>
+      <div><div class="theme-name">${esc(v.name[State.lang] || v.name.en)}</div><div class="theme-tag">${esc(v.tag[State.lang] || v.tag.en)}</div></div>
+    </button>`;
+  });
+  html += '</div>';
+
+  html += '<div class="set-item"><div class="si-ic">🌗</div><div class="si-b"><div class="si-t">' + esc(t('theme')) + '</div><div class="si-d">' + esc(t('themeDesc')) + '</div></div>';
+  html += '<div class="switch' + (State.theme === 'dark' ? ' on' : '') + '" id="themeSw"></div></div>';
+
+  html += '<div class="set-item"><div class="si-ic">🌐</div><div class="si-b"><div class="si-t">' + esc(t('language')) + '</div><div class="si-d">' + esc(t('languageDesc')) + '</div></div>';
+  html += '<select class="sel" id="langSel"><option value="bn">বাংলা</option><option value="en">English</option></select></div>';
+
+  html += '<div class="set-item"><div class="si-ic">🔊</div><div class="si-b"><div class="si-t">' + esc(t('sound')) + '</div><div class="si-d">' + esc(t('soundDesc')) + '</div></div>';
+  html += '<div class="switch' + (State.sound ? ' on' : '') + '" id="soundSw"></div></div>';
+
+  html += '<div class="set-item"><div class="si-ic">✨</div><div class="si-b"><div class="si-t">' + esc(t('animation')) + '</div><div class="si-d">' + esc(t('animationDesc')) + '</div></div>';
+  html += '<div class="switch' + (State.animation ? ' on' : '') + '" id="animSw"></div></div>';
+
+  html += '<div class="set-item"><div class="si-ic">🔢</div><div class="si-b"><div class="si-t">' + esc(t('precision')) + '</div><div class="si-d">' + esc(t('precisionDesc')) + '</div></div>';
+  html += `<select class="sel" id="precSel">${[0,2,4,6,8].map(n => `<option value="${n}"${State.precision === n ? ' selected' : ''}>${n}</option>`).join('')}</select></div>`;
+
+  html += '<div class="set-item"><div class="si-ic">🗑️</div><div class="si-b"><div class="si-t">' + esc(t('clearHistory')) + '</div><div class="si-d">' + esc(t('clearHistoryDesc')) + '</div></div>';
+  html += '<button class="btn ghost sm" id="setClearHist">' + esc(t('clear')) + '</button></div>';
+
+  html += '<div class="set-item"><div class="si-ic">🧹</div><div class="si-b"><div class="si-t">' + esc(t('clearCache')) + '</div><div class="si-d">' + esc(t('clearCacheDesc')) + '</div></div>';
+  html += '<button class="btn ghost sm" id="setClearCache">' + esc(t('clear')) + '</button></div>';
+
+  html += '<div class="dev-card">';
+  html += '<div class="dev-tag">' + esc(t('devCard')) + '</div>';
+  html += '<h2 class="dev-name">MR. MOMIN</h2>';
+  html += '<div class="dev-sub">Created by Mr. Momin</div>';
+  html += '<div class="dev-line"></div>';
+  html += '</div>';
+
+  html += '<div class="dedication-card">';
+  html += '<h3 class="ded-title">❤ A Special Gift for Sumaiya</h3>';
+  html += '<p class="ded-msg">এই ছোট্ট অ্যাপটি তৈরি করা হয়েছে সুমাইয়ার জন্য একটি বিশেষ ভালোবাসার উপহার হিসেবে। প্রতিটি হিসাবের মতো জীবনের প্রতিটি সুন্দর মুহূর্তও হোক আনন্দ, স্বপ্ন আর ভালোবাসায় পূর্ণ।</p>';
+  html += '<div class="ded-foot">— With Love, Mr. Momin 💕</div>';
+  html += '</div>';
+
+  html += '<div class="label">' + esc(t('about')) + '</div>';
+  html += '<div class="muted" style="line-height:1.8;font-size:12px">';
+  html += '<b style="color:var(--txt)">MOMIN MATH AI PRO — Ultimate · Sumaiya Special</b><br>';
+  html += esc(t('version')) + ': 4.1.0<br>';
+  html += esc(t('engine')) + ': MominCore v4 (no-eval parser)<br>';
+  html += esc(t('privacy')) + ': ' + esc(t('privacyText')) + '<br>';
+  html += '</div>';
+
+  $('#modalTitle').textContent = t('settings');
+  $('#modalBody').innerHTML = html;
+
+  $$('[data-version-pick]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      State.version = btn.dataset.versionPick;
+      applyTheme(); saveState();
+      beep(760, 0.08);
+      openSettings();
+      maybeShowSumaiyaGreeting();
+    });
+  });
+
+  $('#themeSw').addEventListener('click', () => { State.theme = State.theme === 'dark' ? 'light' : 'dark'; applyTheme(); saveState(); openSettings(); });
+  $('#langSel').value = State.lang;
+  $('#langSel').addEventListener('change', e => { State.lang = e.target.value === 'en' ? 'en' : 'bn'; saveState(); applyLanguage(); openSettings(); });
+  $('#soundSw').addEventListener('click', () => { State.sound = !State.sound; $('#soundSw').classList.toggle('on', State.sound); saveState(); if (State.sound) beep(800, 0.08); });
+  $('#animSw').addEventListener('click', () => { State.animation = !State.animation; $('#animSw').classList.toggle('on', State.animation); applyTheme(); saveState(); });
+  $('#precSel').addEventListener('change', e => { State.precision = clamp(parseInt(e.target.value, 10) || 0, 0, 8); saveState(); toast(L('নির্ভুলতা: ','Precision: ') + State.precision); });
+  $('#setClearHist').addEventListener('click', () => {
+    if (!State.history.length) { toast(t('noHistory')); return; }
+    if (confirm(L('সব ইতিহাস মুছে ফেলবেন?','Delete all history?'))) {
+      State.history = []; saveState(); renderHomeRecent(); renderHistory(); toast(t('cleared'));
+    }
+  });
+  $('#setClearCache').addEventListener('click', () => {
+    if (!confirm(L('ক্যাশ ও ইতিহাস মুছে ফেলবেন?','Clear cache and history?'))) return;
+    try { localStorage.removeItem(STORE_KEY); } catch (e) {}
+    State.history = []; State.practice = { score:0, total:0, streak:0, best:0 };
+    saveState(); renderHomeRecent(); renderHistory(); renderPracticeStats(); updateDailyLine();
+    toast(t('cleared'));
+  });
+
+  modal.classList.add('show');
+}
+
+/* ---------- Wire events ---------- */
+function wireEvents() {
+  $$('.nav-item').forEach(b => {
+    b.addEventListener('click', () => {
+      switchView(b.dataset.view); beep(620, 0.05);
+      if (b.dataset.view === 'practice' && !Practice.current) newPracticeQuestion();
+    });
+  });
+  $('#langBtn').addEventListener('click', () => {
+    State.lang = State.lang === 'bn' ? 'en' : 'bn';
+    saveState(); applyLanguage();
+    if (Practice.current) $('#qSub').textContent = Practice.current.sub || '';
+    beep(700, 0.07);
+  });
+  $('#settingsBtn').addEventListener('click', openSettings);
+
+  $('#greetClose').addEventListener('click', () => {
+    $('#greetingOverlay').classList.remove('show');
+  });
+  $('#greetingOverlay').addEventListener('click', e => {
+    if (e.target.id === 'greetingOverlay') $('#greetingOverlay').classList.remove('show');
+  });
+
+  $('#homeSolveBtn').addEventListener('click', () => {
+    const v = $('#homeInput').value;
+    if (!v.trim()) { switchView('solve'); $('#solveInput').focus(); return; }
+    switchView('solve'); $('#solveInput').value = v; runSolve(v);
+  });
+  $('#homeClearBtn').addEventListener('click', () => { $('#homeInput').value = ''; });
+  $('#goScanBtn').addEventListener('click', () => switchView('scan'));
+  $('#goSolveBtn').addEventListener('click', () => switchView('solve'));
+  $('#goPracticeBtn').addEventListener('click', () => {
+    switchView('practice');
+    if (!Practice.current) newPracticeQuestion();
+  });
+  $('#seeAllHist').addEventListener('click', () => switchView('history'));
+
+  $('#solveBtn').addEventListener('click', () => runSolve());
+  $('#solveClearBtn').addEventListener('click', () => {
+    $('#solveInput').value = ''; $('#solutionOut').innerHTML = '';
+    hideSolveError(); $('#solveInput').focus();
+  });
+  $('#solveScanBtn').addEventListener('click', () => switchView('scan'));
+  $('#solveInput').addEventListener('input', hideSolveError);
+
+  $('#startCamBtn').addEventListener('click', () => { if (Scanner.stream) stopCamera(); else startCamera(); });
+  $('#captureBtn').addEventListener('click', capturePhoto);
+  $('#uploadBtn').addEventListener('click', () => $('#fileInput').click());
+  $('#fileInput').addEventListener('change', e => {
+    const f = e.target.files && e.target.files[0];
+    handleFile(f); e.target.value = '';
+  });
+  $('#rotateBtn').addEventListener('click', () => {
+    if (!Scanner.sourceCanvas) { toast(L('আগে ছবি নিন বা আপলোড করুন।','Capture or upload first.')); return; }
+    Scanner.rotation = (Scanner.rotation + 90) % 360; renderScanCanvas();
+  });
+  $('#filterBtn').addEventListener('click', () => {
+    if (!Scanner.sourceCanvas) { toast(L('আগে ছবি নিন বা আপলোড করুন।','Capture or upload first.')); return; }
+    Scanner.enhanced = !Scanner.enhanced; renderScanCanvas();
+  });
+  $('#ocrBtn').addEventListener('click', runOCR);
+  $('#ocrClearBtn').addEventListener('click', () => { $('#ocrText').value = ''; });
+  $('#ocrSolveBtn').addEventListener('click', () => {
+    const v = $('#ocrText').value.trim();
+    if (!v) { toast(L('আগে OCR টেক্সট তৈরি করুন।','Run OCR first.')); return; }
+    switchView('solve'); $('#solveInput').value = v; runSolve(v);
+  });
+
+  $$('#levelChips .chip').forEach(c => {
+    c.addEventListener('click', () => {
+      $$('#levelChips .chip').forEach(x => x.classList.remove('active'));
+      c.classList.add('active'); Practice.level = c.dataset.level; newPracticeQuestion();
+    });
+  });
+  $$('#catChips .chip').forEach(c => {
+    c.addEventListener('click', () => {
+      $$('#catChips .chip').forEach(x => x.classList.remove('active'));
+      c.classList.add('active'); Practice.cat = c.dataset.cat; newPracticeQuestion();
+    });
+  });
+  $('#checkBtn').addEventListener('click', checkPracticeAnswer);
+  $('#nextBtn').addEventListener('click', newPracticeQuestion);
+  $('#ansInput').addEventListener('keydown', e => { if (e.key === 'Enter') { e.preventDefault(); checkPracticeAnswer(); } });
+
+  $('#histSearch').addEventListener('input', renderHistory);
+  $$('[data-filter]').forEach(b => {
+    b.addEventListener('click', () => {
+      $$('[data-filter]').forEach(x => x.classList.remove('active'));
+      b.classList.add('active'); historyFilter = b.dataset.filter; renderHistory();
+    });
+  });
+  $('#exportTxt').addEventListener('click', exportTxt);
+  $('#exportJson').addEventListener('click', exportJson);
+  $('#clearHist').addEventListener('click', () => {
+    if (!State.history.length) { toast(t('noHistory')); return; }
+    if (confirm(L('সব ইতিহাস মুছে ফেলবেন?','Delete all history?'))) {
+      State.history = []; saveState(); renderHomeRecent(); renderHistory(); toast(t('cleared'));
+    }
+  });
+
+  $('#modal').addEventListener('click', e => {
+    if (e.target.id === 'modal') $('#modal').classList.remove('show');
+  });
+  window.addEventListener('online', updateNet);
+  window.addEventListener('offline', updateNet);
+  document.addEventListener('keydown', e => {
+    if ((e.ctrlKey || e.metaKey) && e.key === 'Enter' && State.view === 'solve') { e.preventDefault(); runSolve(); }
+  });
+}
+
+/* ---------- Self-test ---------- */
+function selfTest() {
+  const tests = [
+    ['25 + 35', '60'],
+    ['100 / 4', '25'],
+    ['(5 + 3) * 2', '16'],
+    [' 2x + 5 = 15 ', 'x = 5'],
+    ['2x+5=15', 'x = 5'],
+    ['২x + ৫ = ১৫', 'x = 5'],
+    ['x^2 - 5x + 6 = 0', 'x = 2  or  x = 3'],
+    ['x^2 - 4x + 4 = 0', 'x = 2  (repeated root)'],
+    ['x^2 + 1 = 0', 'x = ±i'],
+    ['lcm(12,18)', '36'],
+    ['gcd(48,18)', '6'],
+    ['5!', '120'],
+    ['sqrt(144)', '12']
+  ];
+  let pass = 0; const fails = [];
+  for (const [q, expected] of tests) {
+    try {
+      const r = solveProblem(q);
+      const norm = r.answer.replace(/\s+/g, ' ').trim();
+      const exp = expected.replace(/\s+/g, ' ').trim();
+      if (norm === exp) pass++;
+      else fails.push({ q, expected: exp, got: norm });
+    } catch (e) { fails.push({ q, expected, got: 'ERROR: ' + e.message }); }
+  }
+  console.log(`%c[MOMIN MATH ULTIMATE · SUMAIYA SPECIAL] Self-test: ${pass}/${tests.length} passed`, 'color:#ec4899;font-weight:bold;font-size:12px');
+  if (fails.length) console.table(fails);
+}
+
+/* ---------- Boot ---------- */
+function boot() {
+  loadState();
+  applyTheme();
+  applyLanguage();
+  renderSymbolPad();
+  wireEvents();
+  initParticles();
+  updateNet();
+
+  // If booted with Sumaiya version, ensure greeting shows
+  if (State.version === 'sumaiya') {
+    setTimeout(() => maybeShowSumaiyaGreeting(), 800);
+  }
+  lastVersion = State.version;
+
+  setTimeout(() => {
+    const ld = $('#loader');
+    ld.classList.add('hide');
+    setTimeout(() => { ld.style.display = 'none'; }, 500);
+  }, 640);
+
+  setTimeout(selfTest, 900);
+
+  window.MominMath = { solve: solveProblem, state: State, normalize: normalizeInput, Parser, evalNode };
+}
+if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot);
+else boot();
+
+})();
+</script>
+</body>
+</html>
